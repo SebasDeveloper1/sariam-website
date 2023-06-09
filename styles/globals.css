@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white antialiased dark:bg-zinc-950;
+  }
+}
+
+@layer utilities {
+  .focus {
+    @apply focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500;
+  }
+}
+
+@layer components {
+  .heading_1 {
+    @apply text-5xl tracking-tight sm:text-6xl md:text-7xl;
+  }
+  .heading_2 {
+    @apply text-4xl tracking-tight sm:text-5xl;
+  }
+  .heading_3 {
+    @apply text-3xl tracking-tight sm:text-4xl;
+  }
+  .heading_4 {
+    @apply text-2xl tracking-tight sm:text-3xl;
+  }
+  .heading_5 {
+    @apply text-xl tracking-tight sm:text-2xl;
+  }
+  .heading_6 {
+    @apply text-lg tracking-tight sm:text-xl;
+  }
+  .paragraph_xl {
+    @apply text-xl tracking-tight;
+  }
+  .paragraph_lg {
+    @apply text-lg tracking-tight;
+  }
+  .paragraph_base {
+    @apply text-base tracking-tight;
+  }
+  .paragraph_sm {
+    @apply text-sm tracking-tight;
+  }
+  .paragraph_xs {
+    @apply text-xs tracking-tight;
+  }
+  .span_xl {
+    @apply text-xl tracking-tight;
+  }
+  .span_lg {
+    @apply text-lg tracking-tight;
+  }
+  .span_base {
+    @apply text-base tracking-tight;
+  }
+  .span_sm {
+    @apply text-sm tracking-tight;
+  }
+  .span_xs {
+    @apply text-xs tracking-tight;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-white  bg-lime-500 hover:bg-lime-600/90 transition focus;
+  }
+  .button-secondary {
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-900 bg-zinc-50 hover:bg-zinc-100 dark:text-zinc-300 dark:bg-zinc-800/50 dark:hover:bg-zinc-800 transition focus;
+  }
+  .button-tertiary {
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-900 bg-white hover:bg-lime-50 transition focus;
+  }
+  .button-outlined {
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-700 ring-1 ring-inset ring-zinc-900/10 hover:bg-zinc-900/5 hover:text-zinc-900 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white transition focus;
+  }
+  .button-text {
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-700 hover:bg-zinc-900/5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white transition focus;
+  }
+}
