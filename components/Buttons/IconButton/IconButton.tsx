@@ -7,6 +7,7 @@ export default function IconButton({
   styles = '',
   title = '',
   ariaLabel = '',
+  iconSize = 'text-3xl',
   disabled = false,
   refElement = null,
   handleOnClick,
@@ -32,7 +33,7 @@ export default function IconButton({
       title={title}
       aria-label={ariaLabel}
     >
-      {icon ? <span className="text-3xl">{createElement(icon)}</span> : null}
+      {icon ? <span className={iconSize}>{createElement(icon)}</span> : null}
     </button>
   );
 }

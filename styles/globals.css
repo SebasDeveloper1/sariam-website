@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-white antialiased dark:bg-zinc-950;
+    @apply bg-zinc-900;
   }
 }
 
@@ -65,18 +65,28 @@
   }
 
   .button-primary {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-white  bg-lime-500 hover:bg-lime-600/90 transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-white  bg-lime-600 hover:bg-lime-700/90 transition focus;
   }
   .button-secondary {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-900 bg-zinc-50 hover:bg-zinc-100 dark:text-zinc-300 dark:bg-zinc-800/50 dark:hover:bg-zinc-800 transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-300 bg-zinc-800/50 hover:bg-zinc-800 transition focus;
   }
   .button-tertiary {
     @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-900 bg-white hover:bg-lime-50 transition focus;
   }
   .button-outlined {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-700 ring-1 ring-inset ring-zinc-900/10 hover:bg-zinc-900/5 hover:text-zinc-900 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold ring-1 ring-inset text-zinc-400 ring-white/10 hover:bg-white/5 hover:text-white transition focus;
   }
   .button-text {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-700 hover:bg-zinc-900/5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-400 hover:bg-white/5 hover:text-white transition focus;
+  }
+
+  .navbar-item {
+    @apply block w-fit h-fit py-1 px-2 font-medium text-zinc-400 hover:text-lime-500;
+  }
+  .navbar-item-sm {
+    @apply navbar-item text-lg;
+  }
+  .navbar-item-xl {
+    @apply navbar-item text-base;
   }
 }

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, Ref } from 'react';
+import { ButtonHTMLAttributes, Ref, MouseEvent } from 'react';
 import { IconType } from 'react-icons';
 
 interface GeneralProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -8,8 +8,9 @@ interface GeneralProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   title?: string;
   ariaLabel?: string;
   disabled?: boolean;
-  handleOnClick?: () => void;
+  handleOnClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   refElement?: Ref<HTMLButtonElement>;
+  iconSize?: string;
 }
 
 export interface ButtonProps extends GeneralProps {

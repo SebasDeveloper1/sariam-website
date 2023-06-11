@@ -8,6 +8,7 @@ export default function Button({
   title = '',
   value = '',
   ariaLabel = '',
+  iconSize = 'text-3xl',
   disabled = false,
   refElement = null,
   handleOnClick,
@@ -36,11 +37,11 @@ export default function Button({
       aria-label={ariaLabel}
     >
       {startIcon ? (
-        <span className="text-3xl">{createElement(startIcon)}</span>
+        <span className={iconSize}>{createElement(startIcon)}</span>
       ) : null}
       {value}
       {endIcon ? (
-        <span className="text-3xl">{createElement(endIcon)}</span>
+        <span className={iconSize}>{createElement(endIcon)}</span>
       ) : null}
     </button>
   );
