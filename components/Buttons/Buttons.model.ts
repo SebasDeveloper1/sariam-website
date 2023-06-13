@@ -1,15 +1,10 @@
-import { ButtonHTMLAttributes, Ref, MouseEvent } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import { IconType } from 'react-icons';
 
 interface GeneralProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  type: 'button' | 'submit' | 'reset';
   variant: 'primary' | 'secondary' | 'tertiary' | 'outlined' | 'text';
   styles?: string;
-  title?: string;
-  ariaLabel?: string;
   disabled?: boolean;
-  handleOnClick?: (e: MouseEvent<HTMLButtonElement>) => void;
-  refElement?: Ref<HTMLButtonElement>;
   iconSize?: string;
 }
 

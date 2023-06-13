@@ -49,7 +49,7 @@ export default function Header() {
             styles={`xl:hidden transition-all duration-300 transform text-lime-500 hover:text-lime-600 ${
               isOpen ? 'rotate-90' : ''
             }`}
-            handleOnClick={handleMenu}
+            onClick={handleMenu}
           />
 
           {isOpen ? (

@@ -2,16 +2,12 @@ import { createElement } from 'react';
 import { IconButtonProps, ButtonVariant } from '../Buttons.model';
 
 export default function IconButton({
-  type = 'button',
   variant = 'primary',
   styles = '',
-  title = '',
-  ariaLabel = '',
   iconSize = 'text-3xl',
   disabled = false,
-  refElement = null,
-  handleOnClick,
   icon,
+  ...IconButtonProps
 }: IconButtonProps): JSX.Element {
   const buttonVariant: ButtonVariant = {
     primary: 'button-primary rounded-full p-2.5',
@@ -23,15 +19,11 @@ export default function IconButton({
 
   return (
     <button
-      ref={refElement}
-      type={type}
       disabled={disabled}
       className={`${buttonVariant[variant]} ${styles} ${
         disabled ? 'opacity-50' : ''
       }`}
-      onClick={handleOnClick}
-      title={title}
-      aria-label={ariaLabel}
+      {...IconButtonProps}
     >
       {icon ? <span className={iconSize}>{createElement(icon)}</span> : null}
     </button>
