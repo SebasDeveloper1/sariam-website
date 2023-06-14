@@ -1,12 +1,31 @@
 'use client';
-import { useState, MouseEvent } from 'react';
-import Image from 'next/image';
+import { useState, useEffect, MouseEvent } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md';
 import { IconButton } from '@/components/index';
-import Logo from '@/public/next.svg';
+import { Satisfy } from 'next/font/google';
+
+const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleMenu = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -14,11 +33,18 @@ export default function Header() {
   };
 
   return (
-    <header className="z-20 fixed top-0 flex items-center w-full h-16 px-4 border-b border-zinc-600/[0.05] backdrop-blur-md">
-      <nav className="relative flex justify-between w-full">
+    <header
+      className={`z-20 fixed top-0 flex items-center w-full h-16 ${
+        isScrolled ? 'bg-zinc-900/90' : 'bg-transparent'
+      }`}
+    >
+      <nav className="flex justify-between w-11/12 mx-auto">
         <div className="flex items-center justify-between w-full md:gap-x-12">
-          <a href="#">
-            <Image src={Logo} alt="Logo Sarian Party" className="w-36" />
+          <a
+            href="#"
+            className={`${satisfy.className} font-bold text-3xl text-white`}
+          >
+            SariamParty
           </a>
 
           <ul className="hidden xl:flex items-center justify-center gap-x-6">
@@ -46,28 +72,28 @@ export default function Header() {
             aria-label="Menu"
             iconSize="text-4xl"
             icon={isOpen ? MdClose : MdMenu}
-            styles={`xl:hidden transition-all duration-300 transform text-lime-500 hover:text-lime-600 ${
+            styles={`xl:hidden transition-all duration-300 transform text-lime-500 hover:text-lime-400 ${
               isOpen ? 'rotate-90' : ''
             }`}
             onClick={handleMenu}
           />
 
           {isOpen ? (
-            <div className="fixed xl:hidden inset-0 px-10 py-20 mt-16 backdrop-filter backdrop-blur-sm">
+            <div className="fixed top-0 xl:hidden inset-0 h-screen flex justify-center px-10 py-20 mt-16 bg-zinc-900/70 backdrop-filter backdrop-blur-md">
               <ul className="flex flex-col items-center gap-y-6 w-full">
-                <li className="navbar-item-sm">
+                <li className="navbar-item-sm w-full">
                   <a href="#">Inicio</a>
                 </li>
-                <li className="navbar-item-sm">
+                <li className="navbar-item-sm w-full">
                   <a href="#">Últimos eventos</a>
                 </li>
-                <li className="navbar-item-sm">
+                <li className="navbar-item-sm w-full">
                   <a href="#">Servicios</a>
                 </li>
-                <li className="navbar-item-sm">
+                <li className="navbar-item-sm w-full">
                   <a href="#">Opiniones</a>
                 </li>
-                <li className="navbar-item-sm">
+                <li className="navbar-item-sm w-full">
                   <a href="#">Contacto</a>
                 </li>
               </ul>

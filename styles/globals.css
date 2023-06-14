@@ -4,19 +4,19 @@
 
 @layer base {
   body {
-    @apply bg-zinc-900;
+    @apply bg-body-image bg-cover bg-no-repeat bg-fixed;
   }
 }
 
 @layer utilities {
   .focus {
-    @apply focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500;
+    @apply focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-500;
   }
 }
 
 @layer components {
   .heading_1 {
-    @apply text-5xl tracking-tight sm:text-6xl md:text-7xl;
+    @apply text-5xl tracking-tight sm:text-6xl md:text-7xl xl:text-8xl;
   }
   .heading_2 {
     @apply text-4xl tracking-tight sm:text-5xl;
@@ -65,7 +65,7 @@
   }
 
   .button-primary {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-white  bg-lime-600 hover:bg-lime-700/90 transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-white bg-lime-500 hover:bg-lime-600/90 transition focus;
   }
   .button-secondary {
     @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-zinc-300 bg-zinc-800/50 hover:bg-zinc-800 transition focus;
@@ -81,12 +81,25 @@
   }
 
   .navbar-item {
-    @apply block w-fit h-fit py-1 px-2 font-medium text-zinc-400 hover:text-lime-500;
+    @apply w-full xl:w-fit font-medium text-gray-100 text-center transition-all duration-200 rounded focus:outline-none hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2;
   }
   .navbar-item-sm {
-    @apply navbar-item text-lg;
+    @apply navbar-item text-xl;
   }
   .navbar-item-xl {
     @apply navbar-item text-base;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
 }
