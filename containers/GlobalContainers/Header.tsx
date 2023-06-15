@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <header
       className={`z-20 fixed top-0 flex items-center w-full h-16 ${
-        isScrolled ? 'bg-zinc-900/90' : 'bg-transparent'
+        isScrolled ? 'bg-gray-900/90' : 'bg-transparent'
       }`}
     >
       <nav className="flex justify-between w-11/12 mx-auto">
@@ -79,7 +79,7 @@ export default function Header() {
           />
 
           {isOpen ? (
-            <div className="fixed top-0 xl:hidden inset-0 h-screen flex justify-center px-10 py-20 mt-16 bg-zinc-900/70 backdrop-filter backdrop-blur-md">
+            <div className="fixed top-0 xl:hidden inset-0 h-screen flex justify-center px-10 py-20 mt-16 bg-gray-900/70 backdrop-filter backdrop-blur-md">
               <ul className="flex flex-col items-center gap-y-6 w-full">
                 <li className="navbar-item-sm w-full">
                   <a href="#">Inicio</a>

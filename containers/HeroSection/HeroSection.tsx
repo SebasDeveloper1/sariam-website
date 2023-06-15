@@ -6,7 +6,7 @@ const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
 
 export default function HeroSection(): JSX.Element {
   return (
-    <section className="overflow-hidden flex justify-center items-center min-h-[70vh] py-32 bg-zinc-900/20 backdrop-filter backdrop-blur-sm">
+    <section className="overflow-hidden flex justify-center items-center min-h-[70vh] py-32 bg-lime-900/20 backdrop-filter backdrop-blur-sm">
       <div className="grid grid-cols-3 justify-center items-center gap-6 w-10/12">
         <div className="col-span-3 xl:col-span-2 order-2 xl:order-1 text-center xl:text-start flex flex-col justify-center items-center xl:items-start gap-4">
           <div className="text-center xl:text-left">
@@ -21,7 +21,7 @@ export default function HeroSection(): JSX.Element {
               Eventos y Recepciones
             </span>
           </div>
-          <span className="text-lg xl:text-3xl font-medium text-lime-50 max-w-[40ch]">
+          <span className="text-lg xl:text-3xl font-medium text-lime-50 max-w-[38ch]">
             Celebremos juntos momentos inolvidables, donde la magia cobra vida.
           </span>
         </div>
