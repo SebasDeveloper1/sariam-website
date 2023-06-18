@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-body-image bg-cover bg-no-repeat bg-fixed;
+    @apply w-full h-screen bg-body-image bg-no-repeat bg-fixed;
   }
 }
 
@@ -102,4 +102,17 @@
 
 .fade-in {
   animation: fadeIn 0.3s ease;
+}
+
+@keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -150%;
+  }
+}
+
+.animate {
+  animation: scroll 120s linear infinite;
 }
