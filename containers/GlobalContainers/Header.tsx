@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <header
       className={`z-20 fixed top-0 flex items-center w-full h-16 ${
-        isScrolled ? 'bg-gray-900/90' : 'bg-transparent'
+        isScrolled ? 'bg-gray-900 transition-colors' : 'bg-transparent'
       }`}
     >
       <nav className="flex justify-between w-11/12 mx-auto">
@@ -49,13 +49,13 @@ export default function Header() {
 
           <ul className="hidden xl:flex items-center justify-center gap-x-6">
             <li className="navbar-item-xl">
-              <a href="#">Inicio</a>
+              <a href="#inicio">Inicio</a>
             </li>
             <li className="navbar-item-xl">
-              <a href="#">Últimos eventos</a>
+              <a href="#eventos">Últimos eventos</a>
             </li>
             <li className="navbar-item-xl">
-              <a href="#">Servicios</a>
+              <a href="#servicios">Servicios</a>
             </li>
             <li className="navbar-item-xl">
               <a href="#">Opiniones</a>
@@ -82,13 +82,13 @@ export default function Header() {
             <div className="fixed top-0 xl:hidden inset-0 h-screen flex justify-center px-10 py-20 mt-16 bg-gray-900/70 backdrop-filter backdrop-blur-md">
               <ul className="flex flex-col items-center gap-y-6 w-full">
                 <li className="navbar-item-sm w-full">
-                  <a href="#">Inicio</a>
+                  <a href="#inicio">Inicio</a>
                 </li>
                 <li className="navbar-item-sm w-full">
-                  <a href="#">Últimos eventos</a>
+                  <a href="#eventos">Últimos eventos</a>
                 </li>
                 <li className="navbar-item-sm w-full">
-                  <a href="#">Servicios</a>
+                  <a href="#servicios">Servicios</a>
                 </li>
                 <li className="navbar-item-sm w-full">
                   <a href="#">Opiniones</a>

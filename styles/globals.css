@@ -113,6 +113,6 @@
   }
 }
 
-.animate {
+.animate-carousel {
   animation: scroll 120s linear infinite;
 }
