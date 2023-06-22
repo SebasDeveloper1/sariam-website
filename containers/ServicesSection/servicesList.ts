@@ -51,7 +51,7 @@ const servicesList: servicesListProps[] = [
   },
   {
     icon: FaUserTie,
-    title: 'Logistica y Servicio',
+    title: 'Logística y Servicio',
     description: 'Logística y personal de servicio.',
     bgCard: 'bg-thumbnail-yellow',
   },

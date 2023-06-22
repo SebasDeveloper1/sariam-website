@@ -58,7 +58,7 @@ export default function Header() {
               <a href="#servicios">Servicios</a>
             </li>
             <li className="navbar-item-xl">
-              <a href="#">Opiniones</a>
+              <a href="#opiniones">Opiniones</a>
             </li>
             <li className="navbar-item-xl">
               <a href="#">Contacto</a>
@@ -91,7 +91,7 @@ export default function Header() {
                   <a href="#servicios">Servicios</a>
                 </li>
                 <li className="navbar-item-sm w-full">
-                  <a href="#">Opiniones</a>
+                  <a href="#opiniones">Opiniones</a>
                 </li>
                 <li className="navbar-item-sm w-full">
                   <a href="#">Contacto</a>

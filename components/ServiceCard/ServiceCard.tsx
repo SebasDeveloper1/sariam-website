@@ -17,7 +17,7 @@ export default function ServiceCard({
       <div
         className={`w-full h-full ${bgCard} bg-no-repeat bg-right bg-contain`}
       >
-        <div className="relative flex justify-center items-center gap-5 w-full h-full p-6 text-start bg-gray-900/30">
+        <div className="relative flex justify-center items-center gap-5 w-full h-full p-6 text-start bg-gray-900/25">
           <span className="flex items-center justify-center aspect-square rounded-full bg-lime-50 text-5xl text-lime-500">
             {createElement(icon)}
           </span>
