@@ -49,7 +49,7 @@ export default function ContactSection(): JSX.Element {
               hacer de tu evento un momento inolvidable.
             </p>
             <a
-              href="wa.link/kuu26s"
+              href="https://wa.link/kuu26s"
               target="_blank"
               rel="noopener noreferrer"
               className="button-primary text-xl px-8 py-3"
