@@ -65,19 +65,19 @@
   }
 
   .button-primary {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-white bg-lime-500 hover:bg-lime-600/90 transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-base font-semibold text-gray-950 bg-lime-500 hover:bg-lime-400 transition-colors focus;
   }
   .button-secondary {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-gray-300 bg-gray-800/50 hover:bg-gray-800 transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-base font-semibold text-gray-300 bg-gray-800/50 hover:bg-gray-800 transition-colors focus;
   }
   .button-tertiary {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-gray-900 bg-white hover:bg-lime-50 transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-base font-semibold text-gray-900 bg-white hover:bg-lime-50 transition-colors focus;
   }
   .button-outlined {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold ring-1 ring-inset text-gray-400 ring-white/10 hover:bg-white/5 hover:text-white transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-base font-semibold ring-1 ring-inset text-gray-400 ring-white/10 hover:bg-white/5 hover:text-white transition-colors focus;
   }
   .button-text {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-gray-400 hover:bg-white/5 hover:text-white transition focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-base font-semibold text-gray-400 hover:bg-white/5 hover:text-white transition-colors focus;
   }
 
   .navbar-item {
@@ -115,4 +115,17 @@
 
 .animate-carousel {
   animation: scroll 40s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slower {
+  animation: spin 6s linear infinite;
 }

@@ -3,6 +3,7 @@ import HeroSection from '@/containers/HeroSection/HeroSection';
 import EventsSection from '@/containers/EventsSection/EventsSection';
 import ServicesSection from '@/containers/ServicesSection/ServicesSection';
 import OpinionSection from '@/containers/OpinionSection/OpinionSection';
+import ContactSection from '@/containers/ContactSection/ContactSection';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <EventsSection />
         <ServicesSection />
         <OpinionSection />
+        <ContactSection />
       </main>
     </>
   );

@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, MouseEvent } from 'react';
+import { useState, MouseEvent } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md';
 import { IconButton } from '@/components/index';
 import { Satisfy } from 'next/font/google';
@@ -8,24 +8,6 @@ const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const handleMenu = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -33,15 +15,11 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={`z-20 fixed top-0 flex items-center w-full h-16 ${
-        isScrolled ? 'bg-gray-900 transition-colors' : 'bg-transparent'
-      }`}
-    >
+    <header className="z-20 fixed top-0 flex items-center w-full h-16 bg-gray-900">
       <nav className="flex justify-between w-11/12 mx-auto">
         <div className="flex items-center justify-between w-full md:gap-x-12">
           <a
-            href="#"
+            href="#inicio"
             className={`${satisfy.className} font-bold text-3xl text-white`}
           >
             SariamParty
@@ -60,8 +38,8 @@ export default function Header() {
             <li className="navbar-item-xl">
               <a href="#opiniones">Opiniones</a>
             </li>
-            <li className="navbar-item-xl">
-              <a href="#">Contacto</a>
+            <li className="button-primary rounded-2xl">
+              <a href="#contacto">Contacto</a>
             </li>
           </ul>
 
@@ -94,7 +72,7 @@ export default function Header() {
                   <a href="#opiniones">Opiniones</a>
                 </li>
                 <li className="navbar-item-sm w-full">
-                  <a href="#">Contacto</a>
+                  <a href="#contacto">Contacto</a>
                 </li>
               </ul>
             </div>
