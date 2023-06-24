@@ -1,6 +1,6 @@
 import { createElement } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
-import { socialMediaList } from './socialMediaList';
+import { socialMediaList } from '@/utils/socialMediaList';
 export default function ContactSection(): JSX.Element {
   return (
     <section id="contacto" className="w-full bg-gray-950">

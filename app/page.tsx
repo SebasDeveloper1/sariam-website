@@ -4,6 +4,7 @@ import EventsSection from '@/containers/EventsSection/EventsSection';
 import ServicesSection from '@/containers/ServicesSection/ServicesSection';
 import OpinionSection from '@/containers/OpinionSection/OpinionSection';
 import ContactSection from '@/containers/ContactSection/ContactSection';
+import Footer from '@/containers/GlobalContainers/Footer';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ServicesSection />
         <OpinionSection />
         <ContactSection />
+        <Footer />
       </main>
     </>
   );

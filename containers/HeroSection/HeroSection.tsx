@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { SliderComponent } from '@/components';
-import Logo from '@/public/sariam.png';
+import Logo from '/public/sariam.png';
 import { Satisfy } from 'next/font/google';
 
 const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
