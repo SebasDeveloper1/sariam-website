@@ -1,17 +1,24 @@
-import Image from 'next/image';
+/* eslint-disable react/prop-types */
 import { CSSProperties } from 'react';
-import image from '@/public/party.jpg';
-export default function OpinionCard(): JSX.Element {
+import Image from 'next/image';
+import defaultImage from '@/public/sariam.png';
+import { Opinion } from '@/api/generated/graphql/graphql';
+export default function OpinionCard({ opinionData }: { opinionData: Opinion }) {
+  const { content, author } = opinionData;
   const imageStyle: CSSProperties = {
     objectFit: 'cover',
   };
   return (
-    <li className="col-span-6 md:col-span-3 xl:col-span-2 relative overflow-hidden flex flex-col justify-center items-center gap-y-6 w-full p-6 rounded-2xl shadow-sm bg-sky-50 list-none">
+    <div className="relative overflow-hidden flex flex-col justify-center items-center gap-y-6 w-full p-6 rounded-2xl shadow-sm bg-sky-50">
       <figcaption className="flex justify-between items-center gap-x-2 w-full">
         <figure className="relative overflow-hidden w-14 aspect-square rounded-full object-cover">
           <Image
-            src={image}
-            alt="evento"
+            src={author?.photo?.url || defaultImage}
+            alt={
+              author?.photo?.description ||
+              author?.name ||
+              'Photo of the client'
+            }
             fill={true}
             style={imageStyle}
             loading="lazy"
@@ -21,17 +28,18 @@ export default function OpinionCard(): JSX.Element {
         </figure>
         <div className="w-full">
           <h6 className="heading_6 font-semibold text-gray-900">
-            Ryan Florence
+            {author?.name}
           </h6>
-          <span className="span_base font-medium text-lime-600">Cliente</span>
+          <span className="span_base font-medium text-lime-600">
+            {author?.rol}
+          </span>
         </div>
       </figcaption>
       <div className="w-full">
         <blockquote className="p_base w-100 font-medium text-gray-500">
-          Sariam Party superó mis expectativas y creó una experiencia mágica en
-          mi evento. ¡Altamente recomendado!
+          {content}
         </blockquote>
       </div>
-    </li>
+    </div>
   );
 }
