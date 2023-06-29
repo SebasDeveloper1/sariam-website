@@ -9,7 +9,7 @@ export default function OpinionCard({ opinionData }: { opinionData: Opinion }) {
     objectFit: 'cover',
   };
   return (
-    <div className="relative overflow-hidden flex flex-col justify-center items-center gap-y-6 w-full p-6 rounded-2xl shadow-sm bg-sky-50">
+    <div className="relative overflow-hidden flex flex-col justify-start items-center gap-y-4 w-full p-6 rounded-2xl bg-white shadow-xl shadow-slate-900/10">
       <figcaption className="flex justify-between items-center gap-x-2 w-full">
         <figure className="relative overflow-hidden w-14 aspect-square rounded-full object-cover">
           <Image
@@ -27,16 +27,16 @@ export default function OpinionCard({ opinionData }: { opinionData: Opinion }) {
           />
         </figure>
         <div className="w-full">
-          <h6 className="heading_6 font-semibold text-gray-900">
+          <h6 className="heading_6 font-medium text-gray-900 capitalize leading-none">
             {author?.name}
           </h6>
-          <span className="span_base font-medium text-lime-600">
+          <span className="span_base font-medium text-lime-600 capitalize">
             {author?.role}
           </span>
         </div>
       </figcaption>
       <div className="w-full">
-        <blockquote className="p_base w-100 font-medium text-gray-500">
+        <blockquote className="overflow-hidden p_base w-full text-gray-700">
           {content}
         </blockquote>
       </div>
