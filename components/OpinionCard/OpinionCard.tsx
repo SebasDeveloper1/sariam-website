@@ -31,7 +31,7 @@ export default function OpinionCard({ opinionData }: { opinionData: Opinion }) {
             {author?.name}
           </h6>
           <span className="span_base font-medium text-lime-600">
-            {author?.rol}
+            {author?.role}
           </span>
         </div>
       </figcaption>

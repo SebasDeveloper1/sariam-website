@@ -4,12 +4,13 @@ export const GetOpinionCollection = gql`
   query {
     opinionCollection {
       items {
-        id
+        sys {
+          id
+        }
         content
         author {
-          id
           name
-          rol
+          role
           photo {
             title
             description

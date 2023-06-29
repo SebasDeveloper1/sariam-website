@@ -1,21 +1,21 @@
 query GetOpinionCollection {
-    opinionCollection {
-      items {
-        id
-        content
-        author {
-          id
-          name
-          rol
-          photo {
-            title
-            description
-            size
-            url
-            width
-            height
-          }
+  opinionCollection {
+    items {
+      sys{ id}
+      content
+      author {
+        name
+				role
+        photo {
+          title
+          description
+          size
+          url
+          width
+          height
         }
       }
+      
     }
   }
+}

@@ -209,12 +209,10 @@ export type AssetLinkingCollectionsEntryCollectionArgs = {
 };
 
 export enum AssetLinkingCollectionsAuthorCollectionOrder {
-  IdAsc = 'id_ASC',
-  IdDesc = 'id_DESC',
   NameAsc = 'name_ASC',
   NameDesc = 'name_DESC',
-  RolAsc = 'rol_ASC',
-  RolDesc = 'rol_DESC',
+  RoleAsc = 'role_ASC',
+  RoleDesc = 'role_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
   SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
   SysIdAsc = 'sys_id_ASC',
@@ -252,17 +250,11 @@ export enum AssetOrder {
 export type Author = Entry & {
   __typename?: 'Author';
   contentfulMetadata: ContentfulMetadata;
-  id?: Maybe<Scalars['Int']['output']>;
   linkedFrom?: Maybe<AuthorLinkingCollections>;
   name?: Maybe<Scalars['String']['output']>;
   photo?: Maybe<Asset>;
-  rol?: Maybe<Scalars['String']['output']>;
+  role?: Maybe<Scalars['String']['output']>;
   sys: Sys;
-};
-
-/** Author of the opinion [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/author) */
-export type AuthorIdArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 /** Author of the opinion [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/author) */
@@ -282,7 +274,7 @@ export type AuthorPhotoArgs = {
 };
 
 /** Author of the opinion [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/author) */
-export type AuthorRolArgs = {
+export type AuthorRoleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -298,15 +290,6 @@ export type AuthorFilter = {
   AND?: InputMaybe<Array<InputMaybe<AuthorFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<AuthorFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  id?: InputMaybe<Scalars['Int']['input']>;
-  id_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  id_gt?: InputMaybe<Scalars['Int']['input']>;
-  id_gte?: InputMaybe<Scalars['Int']['input']>;
-  id_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
-  id_lt?: InputMaybe<Scalars['Int']['input']>;
-  id_lte?: InputMaybe<Scalars['Int']['input']>;
-  id_not?: InputMaybe<Scalars['Int']['input']>;
-  id_not_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
   name?: InputMaybe<Scalars['String']['input']>;
   name_contains?: InputMaybe<Scalars['String']['input']>;
   name_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -315,13 +298,13 @@ export type AuthorFilter = {
   name_not_contains?: InputMaybe<Scalars['String']['input']>;
   name_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   photo_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  rol?: InputMaybe<Scalars['String']['input']>;
-  rol_contains?: InputMaybe<Scalars['String']['input']>;
-  rol_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  rol_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  rol_not?: InputMaybe<Scalars['String']['input']>;
-  rol_not_contains?: InputMaybe<Scalars['String']['input']>;
-  rol_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  role?: InputMaybe<Scalars['String']['input']>;
+  role_contains?: InputMaybe<Scalars['String']['input']>;
+  role_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  role_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  role_not?: InputMaybe<Scalars['String']['input']>;
+  role_not_contains?: InputMaybe<Scalars['String']['input']>;
+  role_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
 };
 
@@ -349,8 +332,6 @@ export type AuthorLinkingCollectionsOpinionCollectionArgs = {
 };
 
 export enum AuthorLinkingCollectionsOpinionCollectionOrder {
-  IdAsc = 'id_ASC',
-  IdDesc = 'id_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
   SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
   SysIdAsc = 'sys_id_ASC',
@@ -362,12 +343,10 @@ export enum AuthorLinkingCollectionsOpinionCollectionOrder {
 }
 
 export enum AuthorOrder {
-  IdAsc = 'id_ASC',
-  IdDesc = 'id_DESC',
   NameAsc = 'name_ASC',
   NameDesc = 'name_DESC',
-  RolAsc = 'rol_ASC',
-  RolDesc = 'rol_DESC',
+  RoleAsc = 'role_ASC',
+  RoleDesc = 'role_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
   SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
   SysIdAsc = 'sys_id_ASC',
@@ -536,7 +515,6 @@ export type Opinion = Entry & {
   author?: Maybe<Author>;
   content?: Maybe<Scalars['String']['output']>;
   contentfulMetadata: ContentfulMetadata;
-  id?: Maybe<Scalars['Int']['output']>;
   linkedFrom?: Maybe<OpinionLinkingCollections>;
   sys: Sys;
 };
@@ -550,11 +528,6 @@ export type OpinionAuthorArgs = {
 
 /** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/opinion) */
 export type OpinionContentArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-/** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/opinion) */
-export type OpinionIdArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -584,15 +557,6 @@ export type OpinionFilter = {
   content_not_contains?: InputMaybe<Scalars['String']['input']>;
   content_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  id?: InputMaybe<Scalars['Int']['input']>;
-  id_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  id_gt?: InputMaybe<Scalars['Int']['input']>;
-  id_gte?: InputMaybe<Scalars['Int']['input']>;
-  id_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
-  id_lt?: InputMaybe<Scalars['Int']['input']>;
-  id_lte?: InputMaybe<Scalars['Int']['input']>;
-  id_not?: InputMaybe<Scalars['Int']['input']>;
-  id_not_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
   sys?: InputMaybe<SysFilter>;
 };
 
@@ -609,8 +573,6 @@ export type OpinionLinkingCollectionsEntryCollectionArgs = {
 };
 
 export enum OpinionOrder {
-  IdAsc = 'id_ASC',
-  IdDesc = 'id_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
   SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
   SysIdAsc = 'sys_id_ASC',
@@ -747,15 +709,6 @@ export type CfAuthorNestedFilter = {
   AND?: InputMaybe<Array<InputMaybe<CfAuthorNestedFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<CfAuthorNestedFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  id?: InputMaybe<Scalars['Int']['input']>;
-  id_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  id_gt?: InputMaybe<Scalars['Int']['input']>;
-  id_gte?: InputMaybe<Scalars['Int']['input']>;
-  id_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
-  id_lt?: InputMaybe<Scalars['Int']['input']>;
-  id_lte?: InputMaybe<Scalars['Int']['input']>;
-  id_not?: InputMaybe<Scalars['Int']['input']>;
-  id_not_in?: InputMaybe<Array<InputMaybe<Scalars['Int']['input']>>>;
   name?: InputMaybe<Scalars['String']['input']>;
   name_contains?: InputMaybe<Scalars['String']['input']>;
   name_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -764,13 +717,13 @@ export type CfAuthorNestedFilter = {
   name_not_contains?: InputMaybe<Scalars['String']['input']>;
   name_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   photo_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  rol?: InputMaybe<Scalars['String']['input']>;
-  rol_contains?: InputMaybe<Scalars['String']['input']>;
-  rol_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  rol_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  rol_not?: InputMaybe<Scalars['String']['input']>;
-  rol_not_contains?: InputMaybe<Scalars['String']['input']>;
-  rol_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  role?: InputMaybe<Scalars['String']['input']>;
+  role_contains?: InputMaybe<Scalars['String']['input']>;
+  role_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  role_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  role_not?: InputMaybe<Scalars['String']['input']>;
+  role_not_contains?: InputMaybe<Scalars['String']['input']>;
+  role_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
 };
 
@@ -784,13 +737,12 @@ export type GetOpinionCollectionQuery = {
     __typename?: 'OpinionCollection';
     items: Array<{
       __typename?: 'Opinion';
-      id?: number | null;
       content?: string | null;
+      sys: { __typename?: 'Sys'; id: string };
       author?: {
         __typename?: 'Author';
-        id?: number | null;
         name?: string | null;
-        rol?: string | null;
+        role?: string | null;
         photo?: {
           __typename?: 'Asset';
           title?: string | null;
@@ -827,7 +779,19 @@ export const GetOpinionCollectionDocument = {
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'sys' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'id' },
+                            },
+                          ],
+                        },
+                      },
                       {
                         kind: 'Field',
                         name: { kind: 'Name', value: 'content' },
@@ -840,15 +804,11 @@ export const GetOpinionCollectionDocument = {
                           selections: [
                             {
                               kind: 'Field',
-                              name: { kind: 'Name', value: 'id' },
-                            },
-                            {
-                              kind: 'Field',
                               name: { kind: 'Name', value: 'name' },
                             },
                             {
                               kind: 'Field',
-                              name: { kind: 'Name', value: 'rol' },
+                              name: { kind: 'Name', value: 'role' },
                             },
                             {
                               kind: 'Field',

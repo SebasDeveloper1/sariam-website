@@ -23,7 +23,7 @@ export default async function OpinionSection() {
         <ul className="grid grid-cols-6 justify-center items-center gap-8 w-full">
           {data?.opinionCollection?.items.map((opinion: Opinion) => (
             <li
-              key={`opinion-${opinion?.id}`}
+              key={`opinion-${opinion.sys.id}`}
               className="col-span-6 md:col-span-3 xl:col-span-2"
             >
               <OpinionCard opinionData={opinion} />
