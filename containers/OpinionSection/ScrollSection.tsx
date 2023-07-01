@@ -1,7 +1,7 @@
 'use client';
 import { CSSProperties, useEffect, useState } from 'react';
 import { OpinionCard } from '@/components';
-import { Opinion } from '@/api/generated/graphql/graphql';
+import { Opinion } from '@/api/generated/graphql';
 import { OpinionListProps } from './ScrollSection.model';
 
 export default function ScrollSection({

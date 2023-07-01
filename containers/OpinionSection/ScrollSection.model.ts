@@ -1,4 +1,4 @@
-import { Opinion } from '@/api/generated/graphql/graphql';
+import { Opinion } from '@/api/generated/graphql';
 
 export type OpinionListProps = {
   'list-sm': Opinion[];

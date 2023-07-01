@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:host": "next dev -H 192.168.2.104",
+    "dev:host": "next dev -H 192.168.20.29",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -32,6 +32,8 @@
     "@apollo/experimental-nextjs-app-support": "^0.3.1",
     "@graphql-codegen/cli": "^4.0.1",
     "@graphql-codegen/client-preset": "^4.0.1",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
     "@graphql-codegen/typescript-react-apollo": "^3.3.7",
     "@typescript-eslint/eslint-plugin": "5.59.9",
     "@typescript-eslint/parser": "5.59.9",

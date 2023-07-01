@@ -10,11 +10,10 @@ const config: CodegenConfig = {
         },
       },
   },
-  documents: './api/**/*.graphql',
+  documents: 'api/**/*.graphql',
   generates: {
-    './api/generated/graphql/': {
-      preset: 'client',
-      plugins: [],
+    'api/generated/graphql.tsx': {
+      plugins: ['typescript', 'typescript-operations'],
     },
   },
 };

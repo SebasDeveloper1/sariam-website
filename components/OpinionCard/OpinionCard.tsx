@@ -2,7 +2,7 @@
 import { CSSProperties } from 'react';
 import Image from 'next/image';
 import defaultImage from '@/public/sariam.png';
-import { Opinion } from '@/api/generated/graphql/graphql';
+import { Opinion } from '@/api/generated/graphql';
 export default function OpinionCard({ opinionData }: { opinionData: Opinion }) {
   const { content, author } = opinionData;
   const imageStyle: CSSProperties = {
