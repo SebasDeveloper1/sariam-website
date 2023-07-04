@@ -178,6 +178,7 @@ export type AssetLinkingCollections = {
   __typename?: 'AssetLinkingCollections';
   authorCollection?: Maybe<AuthorCollection>;
   entryCollection?: Maybe<EntryCollection>;
+  serviceCollection?: Maybe<ServiceCollection>;
 };
 
 export type AssetLinkingCollectionsAuthorCollectionArgs = {
@@ -197,6 +198,16 @@ export type AssetLinkingCollectionsEntryCollectionArgs = {
   skip?: InputMaybe<Scalars['Int']['input']>;
 };
 
+export type AssetLinkingCollectionsServiceCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Scalars['String']['input']>;
+  order?: InputMaybe<
+    Array<InputMaybe<AssetLinkingCollectionsServiceCollectionOrder>>
+  >;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+};
+
 export enum AssetLinkingCollectionsAuthorCollectionOrder {
   NameAsc = 'name_ASC',
   NameDesc = 'name_DESC',
@@ -210,6 +221,23 @@ export enum AssetLinkingCollectionsAuthorCollectionOrder {
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
   SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+}
+
+export enum AssetLinkingCollectionsServiceCollectionOrder {
+  CardDescriptionAsc = 'cardDescription_ASC',
+  CardDescriptionDesc = 'cardDescription_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC',
+  TypeAsc = 'type_ASC',
+  TypeDesc = 'type_DESC',
 }
 
 export enum AssetOrder {
@@ -581,6 +609,8 @@ export type Query = {
   entryCollection?: Maybe<EntryCollection>;
   opinion?: Maybe<Opinion>;
   opinionCollection?: Maybe<OpinionCollection>;
+  service?: Maybe<Service>;
+  serviceCollection?: Maybe<ServiceCollection>;
 };
 
 export type QueryAssetArgs = {
@@ -636,6 +666,162 @@ export type QueryOpinionCollectionArgs = {
   skip?: InputMaybe<Scalars['Int']['input']>;
   where?: InputMaybe<OpinionFilter>;
 };
+
+export type QueryServiceArgs = {
+  id: Scalars['String']['input'];
+  locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type QueryServiceCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Scalars['String']['input']>;
+  order?: InputMaybe<Array<InputMaybe<ServiceOrder>>>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<ServiceFilter>;
+};
+
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+export type Service = Entry & {
+  __typename?: 'Service';
+  cardDescription?: Maybe<Scalars['String']['output']>;
+  contentfulMetadata: ContentfulMetadata;
+  generalDescription?: Maybe<Scalars['String']['output']>;
+  linkedFrom?: Maybe<ServiceLinkingCollections>;
+  media?: Maybe<Asset>;
+  serviceDetails?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  sys: Sys;
+  title?: Maybe<Scalars['String']['output']>;
+  type?: Maybe<Scalars['String']['output']>;
+};
+
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+export type ServiceCardDescriptionArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+export type ServiceGeneralDescriptionArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+export type ServiceLinkedFromArgs = {
+  allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+export type ServiceMediaArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+export type ServiceServiceDetailsArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+export type ServiceTitleArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+export type ServiceTypeArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ServiceCollection = {
+  __typename?: 'ServiceCollection';
+  items: Array<Maybe<Service>>;
+  limit: Scalars['Int']['output'];
+  skip: Scalars['Int']['output'];
+  total: Scalars['Int']['output'];
+};
+
+export type ServiceFilter = {
+  AND?: InputMaybe<Array<InputMaybe<ServiceFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<ServiceFilter>>>;
+  cardDescription?: InputMaybe<Scalars['String']['input']>;
+  cardDescription_contains?: InputMaybe<Scalars['String']['input']>;
+  cardDescription_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  cardDescription_in?: InputMaybe<
+    Array<InputMaybe<Scalars['String']['input']>>
+  >;
+  cardDescription_not?: InputMaybe<Scalars['String']['input']>;
+  cardDescription_not_contains?: InputMaybe<Scalars['String']['input']>;
+  cardDescription_not_in?: InputMaybe<
+    Array<InputMaybe<Scalars['String']['input']>>
+  >;
+  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
+  generalDescription?: InputMaybe<Scalars['String']['input']>;
+  generalDescription_contains?: InputMaybe<Scalars['String']['input']>;
+  generalDescription_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  generalDescription_in?: InputMaybe<
+    Array<InputMaybe<Scalars['String']['input']>>
+  >;
+  generalDescription_not?: InputMaybe<Scalars['String']['input']>;
+  generalDescription_not_contains?: InputMaybe<Scalars['String']['input']>;
+  generalDescription_not_in?: InputMaybe<
+    Array<InputMaybe<Scalars['String']['input']>>
+  >;
+  media_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  serviceDetails_contains_all?: InputMaybe<
+    Array<InputMaybe<Scalars['String']['input']>>
+  >;
+  serviceDetails_contains_none?: InputMaybe<
+    Array<InputMaybe<Scalars['String']['input']>>
+  >;
+  serviceDetails_contains_some?: InputMaybe<
+    Array<InputMaybe<Scalars['String']['input']>>
+  >;
+  serviceDetails_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  sys?: InputMaybe<SysFilter>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  title_contains?: InputMaybe<Scalars['String']['input']>;
+  title_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  title_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  title_not?: InputMaybe<Scalars['String']['input']>;
+  title_not_contains?: InputMaybe<Scalars['String']['input']>;
+  title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  type?: InputMaybe<Scalars['String']['input']>;
+  type_contains?: InputMaybe<Scalars['String']['input']>;
+  type_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  type_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  type_not?: InputMaybe<Scalars['String']['input']>;
+  type_not_contains?: InputMaybe<Scalars['String']['input']>;
+  type_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type ServiceLinkingCollections = {
+  __typename?: 'ServiceLinkingCollections';
+  entryCollection?: Maybe<EntryCollection>;
+};
+
+export type ServiceLinkingCollectionsEntryCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+};
+
+export enum ServiceOrder {
+  CardDescriptionAsc = 'cardDescription_ASC',
+  CardDescriptionDesc = 'cardDescription_DESC',
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC',
+  TypeAsc = 'type_ASC',
+  TypeDesc = 'type_DESC',
+}
 
 export type Sys = {
   __typename?: 'Sys';
@@ -741,6 +927,30 @@ export type GetOpinionCollectionQuery = {
           width?: number | null;
           height?: number | null;
         } | null;
+      } | null;
+    } | null>;
+  } | null;
+};
+
+export type GetServiceColectionQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GetServiceColectionQuery = {
+  __typename?: 'Query';
+  serviceCollection?: {
+    __typename?: 'ServiceCollection';
+    items: Array<{
+      __typename?: 'Service';
+      type?: string | null;
+      title?: string | null;
+      cardDescription?: string | null;
+      generalDescription?: string | null;
+      serviceDetails?: Array<string | null> | null;
+      sys: { __typename?: 'Sys'; id: string };
+      media?: {
+        __typename?: 'Asset';
+        title?: string | null;
+        description?: string | null;
+        url?: string | null;
       } | null;
     } | null>;
   } | null;

@@ -22,7 +22,7 @@ export default function EventsSection() {
   };
 
   return (
-    <section id="eventos" className="w-full py-24 bg-gray-800">
+    <section id="eventos" className="w-full py-24 lg:py-32 bg-gray-800">
       <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
         <div className="z-10 relative w-fit mb-16">
           <h2 className="heading_2 w-fit font-bold text-white">

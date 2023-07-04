@@ -1,8 +1,6 @@
-import { IconType } from 'react-icons';
+import { Service } from '@/api/generated/graphql';
 
-export interface servicesListProps {
-  icon: IconType;
-  title: string;
-  description: string;
-  bgCard: string;
-}
+export type serviceProps = Service & {
+  icon?: JSX.Element;
+  bgCard?: string;
+};

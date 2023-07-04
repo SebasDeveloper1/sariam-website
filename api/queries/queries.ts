@@ -24,3 +24,25 @@ export const GetOpinionCollection = gql`
     }
   }
 `;
+
+export const GetServiceColection = gql`
+  query {
+    serviceCollection {
+      items {
+        sys {
+          id
+        }
+        type
+        title
+        cardDescription
+        generalDescription
+        serviceDetails
+        media {
+          title
+          description
+          url
+        }
+      }
+    }
+  }
+`;

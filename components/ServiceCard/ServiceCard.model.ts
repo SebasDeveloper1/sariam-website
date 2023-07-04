@@ -1,10 +1,6 @@
 import { ButtonHTMLAttributes } from 'react';
-import { IconType } from 'react-icons';
-
+import { servicesListProps } from '@/containers/ServicesSection/servicesSection.model';
 export interface ServiceCardProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
-  icon: IconType;
-  title: string;
-  description: string;
-  bgCard?: string;
+  data: servicesListProps;
 }

@@ -14,7 +14,7 @@ export default function ScrollSection({
     'list-md': [],
     'list-lg': [],
   });
-  const [screenSize, setScreenSize] = useState<number>(screen.width);
+  const [screenSize, setScreenSize] = useState<number>(0);
 
   useEffect(() => {
     const handleResize = () => {

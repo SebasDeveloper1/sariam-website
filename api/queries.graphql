@@ -19,3 +19,23 @@ query GetOpinionCollection {
     }
   }
 }
+
+query GetServiceColection {
+  serviceCollection {
+    items {
+      sys {
+        id
+      }
+      type
+      title
+      cardDescription
+      generalDescription
+      serviceDetails
+      media {
+        title
+        description
+        url
+      }
+    }
+  }
+}
