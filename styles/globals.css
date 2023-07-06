@@ -77,7 +77,7 @@
     @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-base font-semibold ring-1 ring-inset text-gray-400 ring-white/10 hover:bg-white/5 hover:text-white transition-colors focus;
   }
   .button-text {
-    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-base font-semibold text-gray-400 hover:bg-white/5 hover:text-white transition-colors focus;
+    @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-gray-950 hover:text-gray-50 transition-colors focus;
   }
 
   .navbar-item {
@@ -139,4 +139,34 @@
 
 .animate-spin-slower {
   animation: spin 6s linear infinite;
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.modal-blow-down {
+  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+
+.modal-blow-up {
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }

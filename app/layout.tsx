@@ -1,9 +1,10 @@
 import '@/styles/globals.css';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
-const inter = Inter({
+const poppins = Poppins({
+  style: 'normal',
+  weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
-  display: 'swap',
 });
 
 export const metadata = {
@@ -17,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.className} scroll-smooth`}>
+    <html lang="en" className={`${poppins.className} scroll-smooth`}>
       <body>{children}</body>
     </html>
   );
