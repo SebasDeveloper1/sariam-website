@@ -6,7 +6,7 @@ export default async function OpinionSection() {
   const { data } = await getClient().query({
     query: GetOpinionCollection,
     context: {
-      fetchOptions: { cache: 'no-store' },
+      fetchOptions: { next: { revalidate: 5 } },
     },
   });
 

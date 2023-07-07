@@ -8,7 +8,9 @@ export default async function ServicesSection(): Promise<JSX.Element> {
   const { data } = await getClient().query({
     query: GetServiceColection,
     context: {
-      fetchOptions: { cache: 'no-store' },
+      fetchOptions: {
+        next: { revalidate: 5 },
+      },
     },
   });
 
