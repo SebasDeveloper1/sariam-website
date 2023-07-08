@@ -17,7 +17,7 @@ export default function ServiceCard({ data }: ServiceCardProps): JSX.Element {
   return (
     <>
       <button
-        className="col-span-6 md:col-span-3 xl:col-span-2 overflow-hidden w-full h-full min-h-[7rem] rounded-2xl shadow-lg bg-gray-800"
+        className="col-span-6 md:col-span-3 xl:col-span-2 overflow-hidden w-full h-full min-h-[7rem] rounded-2xl shadow-lg bg-gray-800 hover:bg-gray-700"
         onClick={handleClick}
       >
         <div
