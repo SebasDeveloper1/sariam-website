@@ -41,7 +41,7 @@ export default function Modal({ children, isOpen, handleClose }: ModalProps) {
           isVisible ? 'opacity-100 modal-blow-down' : 'opacity-0 modal-blow-up'
         }`}
       >
-        <div className="overflow-hidden flex flex-col w-[92vw] lg:w-[90vw] h-[80vh] rounded-2xl shadow-lg bg-beams-cover bg-cover">
+        <div className="overflow-hidden flex flex-col max-w-[92vw] lg:max-w-[90vw] max-h-[80vh] rounded-2xl shadow-lg bg-beams-cover bg-cover">
           <div className="flex justify-end items-center px-2 py-0.5 w-full h-fit">
             <IconButton
               type="button"

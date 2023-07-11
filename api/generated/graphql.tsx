@@ -178,6 +178,7 @@ export type AssetLinkingCollections = {
   __typename?: 'AssetLinkingCollections';
   authorCollection?: Maybe<AuthorCollection>;
   entryCollection?: Maybe<EntryCollection>;
+  eventCollection?: Maybe<EventCollection>;
   serviceCollection?: Maybe<ServiceCollection>;
 };
 
@@ -194,6 +195,16 @@ export type AssetLinkingCollectionsAuthorCollectionArgs = {
 export type AssetLinkingCollectionsEntryCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+};
+
+export type AssetLinkingCollectionsEventCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Scalars['String']['input']>;
+  order?: InputMaybe<
+    Array<InputMaybe<AssetLinkingCollectionsEventCollectionOrder>>
+  >;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
 };
@@ -221,6 +232,19 @@ export enum AssetLinkingCollectionsAuthorCollectionOrder {
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
   SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+}
+
+export enum AssetLinkingCollectionsEventCollectionOrder {
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC',
 }
 
 export enum AssetLinkingCollectionsServiceCollectionOrder {
@@ -431,6 +455,82 @@ export enum EntryOrder {
   SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
 }
 
+/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/event) */
+export type Event = Entry & {
+  __typename?: 'Event';
+  contentfulMetadata: ContentfulMetadata;
+  linkedFrom?: Maybe<EventLinkingCollections>;
+  mediaCollection?: Maybe<AssetCollection>;
+  sys: Sys;
+  title?: Maybe<Scalars['String']['output']>;
+};
+
+/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/event) */
+export type EventLinkedFromArgs = {
+  allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/event) */
+export type EventMediaCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+};
+
+/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/event) */
+export type EventTitleArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type EventCollection = {
+  __typename?: 'EventCollection';
+  items: Array<Maybe<Event>>;
+  limit: Scalars['Int']['output'];
+  skip: Scalars['Int']['output'];
+  total: Scalars['Int']['output'];
+};
+
+export type EventFilter = {
+  AND?: InputMaybe<Array<InputMaybe<EventFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<EventFilter>>>;
+  contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
+  mediaCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  sys?: InputMaybe<SysFilter>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  title_contains?: InputMaybe<Scalars['String']['input']>;
+  title_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  title_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  title_not?: InputMaybe<Scalars['String']['input']>;
+  title_not_contains?: InputMaybe<Scalars['String']['input']>;
+  title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type EventLinkingCollections = {
+  __typename?: 'EventLinkingCollections';
+  entryCollection?: Maybe<EntryCollection>;
+};
+
+export type EventLinkingCollectionsEntryCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+};
+
+export enum EventOrder {
+  SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
+  SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
+  SysIdAsc = 'sys_id_ASC',
+  SysIdDesc = 'sys_id_DESC',
+  SysPublishedAtAsc = 'sys_publishedAt_ASC',
+  SysPublishedAtDesc = 'sys_publishedAt_DESC',
+  SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC',
+}
+
 export enum ImageFormat {
   Avif = 'AVIF',
   /** JPG image format. */
@@ -607,6 +707,8 @@ export type Query = {
   author?: Maybe<Author>;
   authorCollection?: Maybe<AuthorCollection>;
   entryCollection?: Maybe<EntryCollection>;
+  event?: Maybe<Event>;
+  eventCollection?: Maybe<EventCollection>;
   opinion?: Maybe<Opinion>;
   opinionCollection?: Maybe<OpinionCollection>;
   service?: Maybe<Service>;
@@ -650,6 +752,21 @@ export type QueryEntryCollectionArgs = {
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
   where?: InputMaybe<EntryFilter>;
+};
+
+export type QueryEventArgs = {
+  id: Scalars['String']['input'];
+  locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type QueryEventCollectionArgs = {
+  limit?: InputMaybe<Scalars['Int']['input']>;
+  locale?: InputMaybe<Scalars['String']['input']>;
+  order?: InputMaybe<Array<InputMaybe<EventOrder>>>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+  skip?: InputMaybe<Scalars['Int']['input']>;
+  where?: InputMaybe<EventFilter>;
 };
 
 export type QueryOpinionArgs = {
@@ -951,6 +1068,28 @@ export type GetServiceColectionQuery = {
         title?: string | null;
         description?: string | null;
         url?: string | null;
+      } | null;
+    } | null>;
+  } | null;
+};
+
+export type GetEventColectionQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GetEventColectionQuery = {
+  __typename?: 'Query';
+  eventCollection?: {
+    __typename?: 'EventCollection';
+    items: Array<{
+      __typename?: 'Event';
+      title?: string | null;
+      sys: { __typename?: 'Sys'; id: string };
+      mediaCollection?: {
+        __typename?: 'AssetCollection';
+        items: Array<{
+          __typename?: 'Asset';
+          title?: string | null;
+          url?: string | null;
+        } | null>;
       } | null;
     } | null>;
   } | null;

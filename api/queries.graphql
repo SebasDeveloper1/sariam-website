@@ -39,3 +39,20 @@ query GetServiceColection {
     }
   }
 }
+
+query GetEventColection {
+  eventCollection {
+    items {
+      sys {
+        id
+      }
+      title
+      mediaCollection {
+        items {
+          title
+          url
+        }
+      }
+    }
+  }
+}

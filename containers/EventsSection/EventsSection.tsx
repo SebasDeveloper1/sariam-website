@@ -1,25 +1,15 @@
-import Image, { StaticImageData } from 'next/image';
-import { CSSProperties } from 'react';
-import sariam1 from '@/public/sariam1.jpg';
-import sariam2 from '@/public/sariam2.jpg';
-import sariam3 from '@/public/sariam3.jpg';
-import sariam4 from '@/public/sariam4.jpg';
-import sariam5 from '@/public/sariam5.jpg';
-import sariam6 from '@/public/sariam6.jpg';
+import { getClient } from '@/client';
+import { GetEventColection } from '@/api/queries/queries';
+import { Event } from '@/api/generated/graphql';
+import EventCard from '@/components/EventCard/EventCard';
 
-export default function EventsSection() {
-  const imagesList: StaticImageData[] = [
-    sariam1,
-    sariam2,
-    sariam3,
-    sariam4,
-    sariam5,
-    sariam6,
-  ];
-  const imageStyle: CSSProperties = {
-    objectFit: 'cover',
-    transition: 'transform 0.3s ease',
-  };
+export default async function EventsSection(): Promise<JSX.Element> {
+  const { data } = await getClient().query({
+    query: GetEventColection,
+    context: {
+      fetchOptions: { next: { revalidate: 5 } },
+    },
+  });
 
   return (
     <section id="eventos" className="w-full py-24 lg:py-32 bg-gray-800">
@@ -39,24 +29,8 @@ export default function EventsSection() {
         </div>
 
         <section className="grid grid-cols-7 justify-center items-center gap-4 w-full [&>*:nth-child(1)]:col-span-7 md:[&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-7 md:[&>*:nth-child(2)]:col-span-2 [&>*:nth-child(3)]:col-span-7 md:[&>*:nth-child(3)]:col-span-2 [&>*:nth-child(4)]:col-span-7 md:[&>*:nth-child(4)]:col-span-2 [&>*:nth-child(5)]:col-span-7 md:[&>*:nth-child(5)]:col-span-2 [&>*:nth-child(6)]:col-span-7 md:[&>*:nth-child(6)]:col-span-3">
-          {imagesList.map((image, index) => (
-            <figure
-              key={`post-${index}`}
-              className="overflow-hidden col-span-1 md:col-span-3 relative w-full h-64 rounded-2xl bg-slate-600"
-            >
-              <Image
-                src={image}
-                alt="evento"
-                fill={true}
-                style={imageStyle}
-                loading="lazy"
-                quality={100}
-                placeholder="blur"
-                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="hover:scale-105 cursor-pointer"
-              />
-            </figure>
+          {data?.eventCollection?.items.map((event: Event) => (
+            <EventCard key={`event-${event.sys.id}`} event={event} />
           ))}
         </section>
       </div>

@@ -46,3 +46,21 @@ export const GetServiceColection = gql`
     }
   }
 `;
+export const GetEventColection = gql`
+  query {
+    eventCollection {
+      items {
+        sys {
+          id
+        }
+        title
+        mediaCollection {
+          items {
+            title
+            url
+          }
+        }
+      }
+    }
+  }
+`;
