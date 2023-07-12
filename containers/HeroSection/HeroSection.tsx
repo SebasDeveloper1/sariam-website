@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import { SliderComponent } from '@/components';
 import Logo from '/public/sariam.png';
-import { Satisfy } from 'next/font/google';
-
-const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
+import { fontSecondary } from '@/app/fonts';
 
 export default function HeroSection(): JSX.Element {
   return (
@@ -15,12 +13,12 @@ export default function HeroSection(): JSX.Element {
         <div className="col-span-3 xl:col-span-2 order-2 xl:order-1 text-center xl:text-start flex flex-col justify-center items-center xl:items-start gap-4">
           <div className="text-center xl:text-left">
             <h1
-              className={`text-6xl md:text-7xl xl:text-8xl ${satisfy.className} text-white`}
+              className={`text-6xl md:text-7xl xl:text-8xl ${fontSecondary.className} text-white`}
             >
               Sariam Party
             </h1>
             <span
-              className={`text-3xl md:text-4xl xl:text-5xl font-semibold text-lime-400 ${satisfy.className}`}
+              className={`text-3xl md:text-4xl xl:text-5xl font-semibold text-lime-400 ${fontSecondary.className}`}
             >
               Eventos y Recepciones
             </span>

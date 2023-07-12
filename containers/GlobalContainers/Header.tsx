@@ -2,9 +2,7 @@
 import { useState, MouseEvent } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md';
 import { IconButton } from '@/components/index';
-import { Satisfy } from 'next/font/google';
-
-const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
+import { fontSecondary } from '@/app/fonts';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -20,7 +18,7 @@ export default function Header() {
         <div className="flex items-center justify-between w-full md:gap-x-12">
           <a
             href="#inicio"
-            className={`${satisfy.className} font-bold text-3xl text-white`}
+            className={`${fontSecondary.className} font-bold text-3xl text-white`}
           >
             SariamParty
           </a>

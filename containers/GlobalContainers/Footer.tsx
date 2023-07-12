@@ -1,10 +1,8 @@
 import { createElement, CSSProperties } from 'react';
 import Image from 'next/image';
-import { Satisfy } from 'next/font/google';
+import { fontSecondary } from '@/app/fonts';
 import { socialMediaList } from '@/utils/socialMediaList';
 import Logo from '/public/sariam.png';
-
-const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
 
 export default function Footer() {
   const imageStyle: CSSProperties = {
@@ -55,7 +53,7 @@ export default function Footer() {
               blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
             />
           </figure>
-          <h3 className={`heading_3 ${satisfy.className} text-gray-900`}>
+          <h3 className={`heading_3 ${fontSecondary.className} text-gray-900`}>
             SariamParty
           </h3>
         </figcaption>

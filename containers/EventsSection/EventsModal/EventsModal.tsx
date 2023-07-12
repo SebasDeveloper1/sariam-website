@@ -3,11 +3,9 @@ import Image from 'next/image';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Satisfy } from 'next/font/google';
+import { fontSecondary } from '@/app/fonts';
 import { Event } from '@/api/generated/graphql';
 import { ArrowsTypes } from './Events.model';
-
-const satisfy = Satisfy({ subsets: ['latin'], weight: '400' });
 
 function SampleNextArrow(props: ArrowsTypes) {
   const { className, style, onClick } = props;
@@ -70,7 +68,7 @@ export default function EventsModal({ event }: { event: Event }): JSX.Element {
                 />
                 <div className="absolute bottom-0 w-full h-auto p-4 bg-gradient-to-t from-gray-950">
                   <span
-                    className={`w-full ${satisfy.className} text-2xl md:text-3xl lg:text-4xl font-medium text-white truncate`}
+                    className={`w-full ${fontSecondary.className} text-2xl md:text-3xl lg:text-4xl font-medium text-white truncate`}
                   >
                     {event.title}
                   </span>

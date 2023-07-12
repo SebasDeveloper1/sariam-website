@@ -1,11 +1,5 @@
 import '@/styles/globals.css';
-import { Poppins } from 'next/font/google';
-
-const poppins = Poppins({
-  style: 'normal',
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
-});
+import { fontPrimary } from '@/app/fonts';
 
 export const metadata = {
   title: 'Create Next App',
@@ -18,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.className} scroll-smooth`}>
+    <html lang="en" className={`${fontPrimary.className} scroll-smooth`}>
       <body>{children}</body>
     </html>
   );
