@@ -2,6 +2,14 @@
   "name": "sariam-website",
   "version": "0.1.0",
   "private": true,
+  "keywords": [
+    "nextjs",
+    "javaScript",
+    "typeScript",
+    "tailwindcss",
+    "graphql",
+    "react"
+  ],
   "scripts": {
     "dev": "next dev",
     "dev:host": "next dev -H 192.168.2.103",

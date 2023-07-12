@@ -60,11 +60,11 @@ export default function EventsModal({ event }: { event: Event }): JSX.Element {
                 <Image
                   src={item?.url || ''}
                   alt={item?.title || ''}
-                  loading="lazy"
                   placeholder="blur"
                   blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
                   width={1920}
                   height={1080}
+                  priority
                 />
                 <div className="absolute bottom-0 w-full h-auto p-4 bg-gradient-to-t from-gray-950">
                   <span
