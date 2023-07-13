@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="z-20 fixed top-0 flex items-center w-full h-16 bg-gray-900">
+    <header className="z-20 fixed top-0 flex items-center w-full h-16 bg-gray-900 shadow-sm shadow-gray-950">
       <nav className="flex justify-between w-11/12 mx-auto">
         <div className="flex items-center justify-between w-full md:gap-x-12">
           <a

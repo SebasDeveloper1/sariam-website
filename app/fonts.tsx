@@ -1,6 +1,6 @@
-import { Poppins, Courgette } from 'next/font/google';
+import { Poppins, Courgette, Montserrat } from 'next/font/google';
 
-export const fontPrimary = Poppins({
+export const fontPrimary = Montserrat({
   style: 'normal',
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],

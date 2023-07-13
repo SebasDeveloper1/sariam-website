@@ -55,7 +55,7 @@ export default function EventsModal({ event }: { event: Event }): JSX.Element {
       <div className="w-full">
         <Slider {...settings} className="mb-8">
           {mediaCollection?.items.map((item) => (
-            <div key={item?.sys?.id} className="overflow-hidden">
+            <div key={`item-${item?.sys?.id}`} className="overflow-hidden">
               <figure className="relative">
                 <Image
                   src={item?.url || ''}
@@ -66,9 +66,9 @@ export default function EventsModal({ event }: { event: Event }): JSX.Element {
                   height={1080}
                   priority
                 />
-                <div className="absolute bottom-0 w-full h-auto p-4 bg-gradient-to-t from-gray-950">
+                <div className="absolute bottom-0 w-full h-auto p-2 px-4 backdrop-filter backdrop-blur-sm">
                   <span
-                    className={`w-full ${fontSecondary.className} text-2xl md:text-3xl lg:text-4xl font-medium text-white truncate`}
+                    className={`w-full text-2xl md:text-3xl lg:text-4xl font-medium text-white truncate`}
                   >
                     {event.title}
                   </span>

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { SliderComponent } from '@/components';
-import Logo from '/public/sariam.png';
 import { fontSecondary } from '@/app/fonts';
+import Logo from '@/public/sariam.png';
 
 export default function HeroSection(): JSX.Element {
   return (
