@@ -1,10 +1,10 @@
 import { createElement } from 'react';
-import { FaWhatsapp } from 'react-icons/fa';
 import { socialMediaList } from '@/utils/socialMediaList';
+import { ContactButton } from '@/components';
 export default function ContactSection(): JSX.Element {
   return (
     <section id="contacto" className="w-full bg-gray-950">
-      <section className="relative overflow-hidden w-full h-full py-24">
+      <section className="relative overflow-hidden w-full h-full py-20 lg:py-32 bg-dark-3 bg-cover bg-center">
         <div className="absolute left-20 top-1/2 -translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2">
           <svg
             viewBox="0 0 558 558"
@@ -41,24 +41,16 @@ export default function ContactSection(): JSX.Element {
         </div>
         <div className="relative grid grid-cols-2 justify-center items-center gap-16 w-11/12 mx-auto">
           <div className="col-span-2 lg:col-span-1 flex flex-col justify-center items-center gap-8">
-            <h2 className="heading_2 md:text-6xl text-center text-white">
+            <h2 className="heading_2 md:text-6xl text-center font-medium text-white">
               Descubre como podemos ayudarte
             </h2>
-            <p className="paragraph_xl max-w-prose mb-4 text-center text-gray-300">
+            <p className="paragraph_xl max-w-prose mb-4 text-center text-gray-400">
               Contáctanos para saber más sobre nuestros servicios y cómo podemos
               hacer de tu evento un momento inolvidable.
             </p>
-            <a
-              href="https://wa.link/kuu26s"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-primary text-xl px-8 py-3"
-            >
-              <FaWhatsapp className="mr-2 text-3xl" />
-              Contactar ahora
-            </a>
+            <ContactButton />
             <div className="flex flex-col justify-center items-center gap-5 w-11/12 mx-auto">
-              <span className="span_lg font-medium text-center text-gray-500">
+              <span className="span_lg font-medium text-center text-gray-400">
                 Siguenos en
               </span>
               <ul className="flex justify-center items-center gap-8 list-none">
@@ -69,7 +61,7 @@ export default function ContactSection(): JSX.Element {
                       target="_blank"
                       rel="noopener noreferrer"
                       title={item.title}
-                      className="text-4xl text-gray-700 hover:text-gray-50"
+                      className="text-4xl text-gray-600 hover:text-gray-50"
                     >
                       {createElement(item.icon)}
                     </a>

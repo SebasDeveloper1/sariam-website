@@ -34,6 +34,7 @@ export default function OpinionCard({ opinionData }: { opinionData: Opinion }) {
                 loading="lazy"
                 placeholder="blur"
                 blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+                sizes="3.5rem"
               />
             </figure>
             <div className="w-full">

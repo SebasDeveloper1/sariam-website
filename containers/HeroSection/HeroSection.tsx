@@ -28,7 +28,12 @@ export default function HeroSection(): JSX.Element {
           </span>
         </div>
         <div className="col-span-3 xl:col-span-1 place-self-center order-1 xl:order-2 relative w-64 h-64 xl:w-72 xl:h-72 flex justify-center items-center">
-          <Image src={Logo} alt="Logo Sariam Party" priority />
+          <Image
+            src={Logo}
+            alt="Logo Sariam Party"
+            priority
+            sizes="(max-width: 768px) 16rem, (max-width: 1280px) 18rem"
+          />
         </div>
       </div>
       <div className="absolute bottom-0 w-full">

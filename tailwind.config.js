@@ -26,6 +26,7 @@ module.exports = {
         'dark-1': 'url("../public/gradient-dark-1.png")',
         'dark-2': 'url("../public/gradient-dark-2.png")',
         'dark-3': 'url("../public/gradient-dark-3.png")',
+        'dark-4': 'url("../public/gradient-dark-4.png")',
       },
     },
   },
