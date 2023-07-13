@@ -27,21 +27,8 @@ export default function Footer() {
 
   return (
     <section className="relative overflow-hidden w-full py-24 bg-gray-100 border-t-8 border-lime-500">
-      <div className="absolute -top-14 -left-14 h-full aspect-square scale-110 opacity-10">
-        <figure className="relative w-full aspect-square rounded-full bg-gray-900 border-4 border-lime-500">
-          <Image
-            src={Logo}
-            alt="Logo Sariam Party"
-            fill={true}
-            style={imageStyle}
-            loading="lazy"
-            placeholder="blur"
-            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
-          />
-        </figure>
-      </div>
       <div className="relative flex flex-col justify-center items-center w-11/12 mx-auto">
-        <figcaption className="flex justify-center items-center gap-x-2 mb-8">
+        <figcaption className="flex justify-center items-center gap-x-2 mb-6">
           <figure className="relative w-12 aspect-square rounded-full bg-gray-900 border-2 border-lime-500">
             <Image
               src={Logo}
@@ -51,13 +38,14 @@ export default function Footer() {
               loading="lazy"
               placeholder="blur"
               blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+              sizes="3rem"
             />
           </figure>
-          <h3 className={`heading_3 ${fontSecondary.className} text-gray-900`}>
+          <h3 className={`heading_3 ${fontSecondary.className} text-gray-950`}>
             SariamParty
           </h3>
         </figcaption>
-        <span className="mb-12 font-medium text-center text-gray-500">
+        <span className="mb-10 span_base font-medium text-center text-gray-600">
           © 2023 Sariam Party, Todos los derechos reservados.
         </span>
         <ul className="flex justify-center items-center gap-8 list-none">
