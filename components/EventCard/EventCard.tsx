@@ -30,10 +30,10 @@ export default function EventCard({ event }: { event: Event }) {
       {loading ? (
         <div className="overflow-hidden relative w-full h-64 rounded-2xl bg-gray-700 animate-pulse" />
       ) : (
-        <li className="overflow-hidden w-full h-64 rounded-2xl">
+        <li className="w-full h-64">
           <button
             type="button"
-            className="relative w-full h-full bg-slate-600"
+            className="overflow-hidden relative w-full h-full rounded-2xl bg-slate-600"
             onClick={handleClick}
           >
             <Image
