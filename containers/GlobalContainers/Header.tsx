@@ -12,6 +12,10 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  const handleMobileMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className="z-20 fixed top-0 flex items-center w-full h-16 bg-gray-900 shadow-sm shadow-gray-950">
       <nav className="flex justify-between w-11/12 mx-auto">
@@ -54,27 +58,39 @@ export default function Header() {
             onClick={handleMenu}
           />
 
-          {isOpen ? (
-            <div className="fixed top-0 xl:hidden inset-0 h-screen flex justify-center px-10 py-20 mt-16 bg-gray-900/70 backdrop-filter backdrop-blur-md">
-              <ul className="flex flex-col items-center gap-y-6 w-full">
-                <li className="navbar-item-sm w-full">
-                  <a href="#inicio">Inicio</a>
-                </li>
-                <li className="navbar-item-sm w-full">
-                  <a href="#eventos">Últimos eventos</a>
-                </li>
-                <li className="navbar-item-sm w-full">
-                  <a href="#servicios">Servicios</a>
-                </li>
-                <li className="navbar-item-sm w-full">
-                  <a href="#opiniones">Opiniones</a>
-                </li>
-                <li className="navbar-item-sm w-full">
-                  <a href="#contacto">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          ) : null}
+          <div
+            className={`fixed top-0 xl:hidden inset-0 h-screen flex justify-center px-10 py-20 mt-16 bg-gray-900/70 backdrop-filter backdrop-blur-md transition-all duration-500 ease-in-out ${
+              isOpen ? 'menu-mobile--open' : 'menu-mobile--close'
+            }`}
+          >
+            <ul className="flex flex-col items-center gap-y-6 w-full">
+              <li className="navbar-item-sm w-full">
+                <a href="#inicio" onClick={handleMobileMenu}>
+                  Inicio
+                </a>
+              </li>
+              <li className="navbar-item-sm w-full">
+                <a href="#eventos" onClick={handleMobileMenu}>
+                  Últimos eventos
+                </a>
+              </li>
+              <li className="navbar-item-sm w-full">
+                <a href="#servicios" onClick={handleMobileMenu}>
+                  Servicios
+                </a>
+              </li>
+              <li className="navbar-item-sm w-full">
+                <a href="#opiniones" onClick={handleMobileMenu}>
+                  Opiniones
+                </a>
+              </li>
+              <li className="navbar-item-sm w-full">
+                <a href="#contacto" onClick={handleMobileMenu}>
+                  Contacto
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>

@@ -96,6 +96,14 @@
     @apply inline-flex items-center justify-center gap-2 py-2 px-4 rounded-md text-base font-semibold text-gray-950 hover:text-gray-50 transition-colors focus;
   }
 
+  .menu-mobile--open {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .menu-mobile--close {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
   .navbar-item {
     @apply w-full xl:w-fit font-medium text-gray-100 text-center transition-all duration-200 rounded focus:outline-none hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2;
   }
