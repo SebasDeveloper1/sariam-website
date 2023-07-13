@@ -11,15 +11,15 @@ export default async function OpinionSection() {
   });
 
   return (
-    <section id="opiniones" className="w-full py-24 lg:py-32 bg-slate-50">
+    <section id="opiniones" className="w-full py-20 lg:py-32 bg-slate-50">
       <div className="flex flex-col justify-center items-center w-11/12 mx-auto">
-        <h2 className="heading_2 w-fit mb-6 font-bold text-gray-900">
+        <h2 className="heading_2 w-fit mb-7 font-bold text-gray-900">
           Opiniones
         </h2>
         <p className="paragraph_xl max-w-prose mb-4 font-medium text-center text-gray-600">
           ¿Qué opiniones tienen nuestros clientes sobre nuestro trabajo?
         </p>
-        <div className="flex justify-center items-center gap-4 w-full mb-20">
+        <div className="flex justify-center items-center gap-4 w-full mb-10">
           {Array.from(Array(5).keys()).map((index) => (
             <svg
               key={index}
