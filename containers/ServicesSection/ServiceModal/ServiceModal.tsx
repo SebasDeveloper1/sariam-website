@@ -17,7 +17,7 @@ export default function ServiceModal({ data }: ServiceModalProps): JSX.Element {
   const { title, media, generalDescription, serviceDetails } = data;
 
   return (
-    <div className="overflow-auto w-full h-full rounded-b-2xl p-0 lg:p-7 lg:pt-0">
+    <div className="overflow-auto w-full h-full rounded-b-2xl p-0 lg:p-7 lg:pt-0 scroll-card--light">
       <div className="grid grid-cols-7 grid-flow-row justify-start items-start gap-6 lg:gap-x-12">
         <div className="col-span-7">
           <span className="block span_sm w-fit px-2 py-0.5 mb-3 bg-lime-500/80 text-white font-medium rounded-r-full lg:rounded-full">
