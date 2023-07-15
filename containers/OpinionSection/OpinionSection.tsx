@@ -3,9 +3,7 @@ import { GetOpinionCollection } from '@/api/queries/queries';
 import ScrollSection from './ScrollSection';
 import { Opinion } from '@/api/generated/graphql';
 
-export default async function OpinionSection(): Promise<
-  JSX.Element | { notFound: boolean }
-> {
+export default async function OpinionSection(): Promise<JSX.Element> {
   let opinionList: Opinion[] = [];
 
   try {
@@ -20,9 +18,7 @@ export default async function OpinionSection(): Promise<
 
     opinionList = data.opinionCollection.items;
   } catch (error) {
-    return {
-      notFound: true,
-    };
+    console.log(error);
   }
 
   return (

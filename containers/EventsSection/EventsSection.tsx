@@ -3,9 +3,7 @@ import { GetEventColection } from '@/api/queries/queries';
 import { Event } from '@/api/generated/graphql';
 import EventCard from '@/components/EventCard/EventCard';
 
-export default async function EventsSection(): Promise<
-  JSX.Element | { notFound: boolean }
-> {
+export default async function EventsSection(): Promise<JSX.Element> {
   let eventsList: Event[] = [];
 
   try {
@@ -17,9 +15,7 @@ export default async function EventsSection(): Promise<
     });
     eventsList = data?.eventCollection?.items;
   } catch (error) {
-    return {
-      notFound: true,
-    };
+    console.log(error);
   }
 
   return (

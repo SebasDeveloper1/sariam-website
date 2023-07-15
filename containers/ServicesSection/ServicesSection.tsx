@@ -4,9 +4,7 @@ import { serviceProps } from './servicesSection.model';
 import { ServiceCard } from '@/components/index';
 import getServiceList from './getServiceList';
 
-export default async function ServicesSection(): Promise<
-  JSX.Element | { notFound: boolean }
-> {
+export default async function ServicesSection(): Promise<JSX.Element> {
   let servicesList: serviceProps[] = [];
 
   try {
@@ -21,9 +19,7 @@ export default async function ServicesSection(): Promise<
 
     servicesList = getServiceList(data.serviceCollection.items);
   } catch (error) {
-    return {
-      notFound: true,
-    };
+    console.log(error);
   }
 
   return (
