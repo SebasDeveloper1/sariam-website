@@ -3,13 +3,24 @@ import { GetEventColection } from '@/api/queries/queries';
 import { Event } from '@/api/generated/graphql';
 import EventCard from '@/components/EventCard/EventCard';
 
-export default async function EventsSection(): Promise<JSX.Element> {
-  const { data } = await getClient().query({
-    query: GetEventColection,
-    context: {
-      fetchOptions: { next: { revalidate: 5 } },
-    },
-  });
+export default async function EventsSection(): Promise<
+  JSX.Element | { notFound: boolean }
+> {
+  let eventsList: Event[] = [];
+
+  try {
+    const { data } = await getClient().query({
+      query: GetEventColection,
+      context: {
+        fetchOptions: { next: { revalidate: 5 } },
+      },
+    });
+    eventsList = data?.eventCollection?.items;
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
 
   return (
     <section id="eventos" className="w-full bg-gray-900">
@@ -21,7 +32,7 @@ export default async function EventsSection(): Promise<JSX.Element> {
           <span className="text-4xl mb-16 text-center">🎉 🥳</span>
 
           <ul className="grid grid-cols-7 justify-center items-center gap-6 w-full [&>*:nth-child(1)]:col-span-7 md:[&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-7 md:[&>*:nth-child(2)]:col-span-2 [&>*:nth-child(3)]:col-span-7 md:[&>*:nth-child(3)]:col-span-2 [&>*:nth-child(4)]:col-span-7 md:[&>*:nth-child(4)]:col-span-2 [&>*:nth-child(5)]:col-span-7 md:[&>*:nth-child(5)]:col-span-2 [&>*:nth-child(6)]:col-span-7 md:[&>*:nth-child(6)]:col-span-3">
-            {data?.eventCollection?.items.map((event: Event) => (
+            {eventsList.map((event: Event) => (
               <EventCard key={`event-${event.sys.id}`} event={event} />
             ))}
           </ul>

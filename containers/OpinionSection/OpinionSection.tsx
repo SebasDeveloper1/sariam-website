@@ -1,14 +1,29 @@
 import { getClient } from '@/client';
 import { GetOpinionCollection } from '@/api/queries/queries';
 import ScrollSection from './ScrollSection';
+import { Opinion } from '@/api/generated/graphql';
 
-export default async function OpinionSection() {
-  const { data } = await getClient().query({
-    query: GetOpinionCollection,
-    context: {
-      fetchOptions: { next: { revalidate: 5 } },
-    },
-  });
+export default async function OpinionSection(): Promise<
+  JSX.Element | { notFound: boolean }
+> {
+  let opinionList: Opinion[] = [];
+
+  try {
+    const { data } = await getClient().query({
+      query: GetOpinionCollection,
+      context: {
+        fetchOptions: {
+          next: { revalidate: 5 },
+        },
+      },
+    });
+
+    opinionList = data.opinionCollection.items;
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
 
   return (
     <section id="opiniones" className="w-full py-20 lg:py-32 bg-slate-50">
@@ -43,7 +58,7 @@ export default async function OpinionSection() {
             </svg>
           ))}
         </div>
-        <ScrollSection dataList={data?.opinionCollection?.items} />
+        <ScrollSection dataList={opinionList} />
       </div>
     </section>
   );
