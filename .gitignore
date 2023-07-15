@@ -16,9 +16,7 @@
 /build
 
 # dotenv environment variables file
-.env
-.env.test
-
+/.env
 # misc
 .DS_Store
 *.pem
