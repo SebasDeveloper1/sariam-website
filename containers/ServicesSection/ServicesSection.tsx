@@ -4,19 +4,27 @@ import { serviceProps } from './servicesSection.model';
 import { ServiceCard } from '@/components/index';
 import getServiceList from './getServiceList';
 
-export default async function ServicesSection(): Promise<JSX.Element> {
-  const { data } = await getClient().query({
-    query: GetServiceColection,
-    context: {
-      fetchOptions: {
-        next: { revalidate: 5 },
-      },
-    },
-  });
+export default async function ServicesSection(): Promise<
+  JSX.Element | { notFound: boolean }
+> {
+  let servicesList: serviceProps[] = [];
 
-  const servicesList: serviceProps[] = getServiceList(
-    data.serviceCollection.items
-  );
+  try {
+    const { data } = await getClient().query({
+      query: GetServiceColection,
+      context: {
+        fetchOptions: {
+          next: { revalidate: 5 },
+        },
+      },
+    });
+
+    servicesList = getServiceList(data.serviceCollection.items);
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
 
   return (
     <section id="servicios" className="w-full bg-gray-900">
