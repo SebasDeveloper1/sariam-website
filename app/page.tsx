@@ -1,4 +1,3 @@
-import LoadingLayout from '@/containers/GlobalContainers/LoadingLayout';
 import Header from '@/containers/GlobalContainers/Header';
 import HeroSection from '@/containers/HeroSection/HeroSection';
 import EventsSection from '@/containers/EventsSection/EventsSection';
@@ -10,7 +9,6 @@ import Footer from '@/containers/GlobalContainers/Footer';
 export default function Home() {
   return (
     <>
-      <LoadingLayout />
       <Header />
       <main className="w-full">
         <HeroSection />
