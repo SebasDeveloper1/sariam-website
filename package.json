@@ -20,7 +20,9 @@
     "eslint:fix": "eslint --fix \"**/*.+(js|jsx|ts|tsx)\"",
     "prettier": "prettier --check \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|md|css)\"",
     "prettier:fix": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|md|css)\"",
-    "codegen": "graphql-codegen -r dotenv/config --config codegen.ts"
+    "codegen": "graphql-codegen -r dotenv/config --config codegen.ts",
+    "jest": "jest",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "@types/node": "20.2.5",
@@ -47,6 +49,8 @@
     "@graphql-codegen/typescript": "4.0.1",
     "@graphql-codegen/typescript-operations": "4.0.1",
     "@graphql-codegen/typescript-react-apollo": "3.3.7",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
     "@typescript-eslint/eslint-plugin": "5.59.9",
     "@typescript-eslint/parser": "5.59.9",
     "eslint": "8.42.0",
@@ -58,6 +62,8 @@
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-react": "7.32.2",
     "graphql": "16.7.1",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1",
     "prettier": "2.8.8",
     "ts-node": "10.9.1",
     "typescript": "5.1.3"
