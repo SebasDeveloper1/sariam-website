@@ -2,11 +2,8 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { Button } from '@/components';
-
-// Mock the startIcon and endIcon components for testing
-const MockIcon = () => <div id="mock-icon">Icon</div>;
-
-const MockFunction = jest.fn();
+import { MockIcon } from '@/__mocks__/MockIcon';
+import { MockFunction } from '@/__mocks__/MockFunctions';
 
 describe('Render button component', () => {
   // Tests that the button renders with default props
