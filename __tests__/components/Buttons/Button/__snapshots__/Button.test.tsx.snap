@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render button component Button component matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button-secondary "
+  >
+    Custom value
+  </button>
+</DocumentFragment>
+`;

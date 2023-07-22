@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from 'react';
 import { IconType } from 'react-icons';
 
 interface GeneralProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: 'primary' | 'secondary' | 'tertiary' | 'outlined' | 'text';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'outlined' | 'text';
   styles?: string;
   disabled?: boolean;
   iconSize?: string;
