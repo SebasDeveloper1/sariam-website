@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton component Snapshot should match the IconButton component snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button-secondary rounded-full p-2.5  "
+  />
+</DocumentFragment>
+`;
+
+exports[`Render IconButton component Button component matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="button-secondary rounded-full p-2.5  "
+  />
+</DocumentFragment>
+`;
