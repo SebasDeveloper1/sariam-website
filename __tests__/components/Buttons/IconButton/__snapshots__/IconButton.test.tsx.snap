@@ -7,11 +7,3 @@ exports[`IconButton component Snapshot should match the IconButton component sna
   />
 </DocumentFragment>
 `;
-
-exports[`Render IconButton component Button component matches snapshot 1`] = `
-<DocumentFragment>
-  <button
-    class="button-secondary rounded-full p-2.5  "
-  />
-</DocumentFragment>
-`;

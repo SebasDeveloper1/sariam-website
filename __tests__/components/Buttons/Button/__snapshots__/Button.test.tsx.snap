@@ -9,23 +9,3 @@ exports[`Button Component Snapshot should match the Button component snapshot 1`
   </button>
 </DocumentFragment>
 `;
-
-exports[`Button Component should match the Button component snapshot 1`] = `
-<DocumentFragment>
-  <button
-    class="button-secondary "
-  >
-    Custom value
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Render button component Button component matches snapshot 1`] = `
-<DocumentFragment>
-  <button
-    class="button-secondary "
-  >
-    Custom value
-  </button>
-</DocumentFragment>
-`;

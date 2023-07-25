@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpinionCard component Snapshot should match the OpinionCard component snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="relative overflow-hidden flex flex-col justify-start items-center gap-y-4 w-full p-6 rounded-2xl bg-white shadow-xl shadow-slate-900/10"
+    role="article"
+  >
+    <figcaption
+      class="flex justify-between items-center gap-x-3 w-full"
+    >
+      <figure
+        class="relative overflow-hidden w-14 aspect-square rounded-full object-cover"
+      >
+        <img
+          alt="John Doe photo"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          sizes="3.5rem"
+          src="/_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=3840&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=16&q=75 16w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=32&q=75 32w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=48&q=75 48w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=64&q=75 64w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=96&q=75 96w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=128&q=75 128w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=384&q=75 384w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fexample.com%2Fphoto.jpg&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+        />
+      </figure>
+      <div
+        class="w-full"
+      >
+        <h6
+          class="heading_6 font-semibold text-gray-900 capitalize leading-none"
+        >
+          John Doe
+        </h6>
+        <span
+          class="span_sm font-medium text-lime-600 capitalize"
+        >
+          CEO
+        </span>
+      </div>
+    </figcaption>
+    <div
+      class="w-full"
+    >
+      <blockquote
+        class="overflow-hidden w-full paragraph_base text-gray-700"
+      >
+        This is a great product!
+      </blockquote>
+    </div>
+  </div>
+</DocumentFragment>
+`;

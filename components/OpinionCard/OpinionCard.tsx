@@ -3,14 +3,22 @@ import { CSSProperties } from 'react';
 import Image from 'next/image';
 import defaultImage from '@/public/sariam.png';
 import { Opinion } from '@/api/generated/graphql';
-export default function OpinionCard({ opinionData }: { opinionData: Opinion }) {
+import { MockOpinionTestProps } from './OpinionCard.model';
+export default function OpinionCard({
+  opinionData,
+}: {
+  opinionData: Opinion | MockOpinionTestProps;
+}) {
   const { content, author } = opinionData;
   const imageStyle: CSSProperties = {
     objectFit: 'cover',
   };
 
   return (
-    <div className="relative overflow-hidden flex flex-col justify-start items-center gap-y-4 w-full p-6 rounded-2xl bg-white shadow-xl shadow-slate-900/10">
+    <div
+      role="article"
+      className="relative overflow-hidden flex flex-col justify-start items-center gap-y-4 w-full p-6 rounded-2xl bg-white shadow-xl shadow-slate-900/10"
+    >
       <figcaption className="flex justify-between items-center gap-x-3 w-full">
         <figure className="relative overflow-hidden w-14 aspect-square rounded-full object-cover">
           <Image
