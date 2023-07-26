@@ -18,9 +18,12 @@ const eventsList: string[] = [
 ];
 export default function SliderComponent(): JSX.Element {
   return (
-    <div className="flex items-center justify-center w-full py-2 bg-lime-600">
+    <div
+      role="slider"
+      className="flex items-center justify-center w-full py-2 bg-lime-600"
+    >
       <div className="w-[300%] h-12 overflow-hidden relative">
-        <div className="w-[300%] flex items-center h-12 justify-around absolute left-0 animate-carousel gap-4 animate-carousel">
+        <div className="w-[300%] flex items-center h-12 justify-around absolute left-0 animate-carousel gap-4">
           {eventsList.map((event, index) => (
             <div key={`slider-event-${index}-1`}>
               <span

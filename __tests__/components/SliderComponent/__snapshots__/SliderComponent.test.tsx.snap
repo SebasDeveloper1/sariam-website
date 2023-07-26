@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliderComponent component Snapshots should match the SliderComponent component snapshot 1`] = `
+<div
+  class="flex items-center justify-center w-full py-2 bg-lime-600"
+  role="slider"
+>
+  <div
+    class="w-[300%] h-12 overflow-hidden relative"
+  >
+    <div
+      class="w-[300%] flex items-center h-12 justify-around absolute left-0 animate-carousel gap-4"
+    >
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Eventos empresariales
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          15 Años
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Matrimonios
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Bautizos
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Cumpleaños
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Fotografía
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Luces y Sonido
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Animación y Dj
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Eventos empresariales
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          15 Años
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Matrimonios
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Bautizos
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Cumpleaños
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Fotografía
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Luces y Sonido
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Animación y Dj
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Eventos empresariales
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          15 Años
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Matrimonios
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Bautizos
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Cumpleaños
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Fotografía
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Luces y Sonido
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Animación y Dj
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Eventos empresariales
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          15 Años
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Matrimonios
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Bautizos
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Cumpleaños
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Fotografía
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Luces y Sonido
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Animación y Dj
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Eventos empresariales
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          15 Años
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Matrimonios
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Bautizos
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Cumpleaños
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Fotografía
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Luces y Sonido
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Animación y Dj
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Eventos empresariales
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          15 Años
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Matrimonios
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Bautizos
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Cumpleaños
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Fotografía
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Luces y Sonido
+        </span>
+      </div>
+      <div>
+        <span
+          class="span_lg block w-fit px-6 py-2 rounded-2xl text-gray-50 whitespace-nowrap bg-lime-900/50"
+          style="margin-right: 1rem;"
+        >
+          Animación y Dj
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
