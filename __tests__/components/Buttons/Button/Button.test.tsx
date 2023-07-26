@@ -59,7 +59,7 @@ describe('Button Component', () => {
 
   // Interaction Tests
   describe('Interaction', () => {
-    it('should call the custom onClick function only once', () => {
+    test('should call the custom onClick function only once', () => {
       const { getByRole } = render(<Button onClick={MockFunction} />);
       const button = getByRole('button');
       expect(button).toBeInTheDocument();

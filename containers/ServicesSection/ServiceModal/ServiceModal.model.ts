@@ -1,7 +1,7 @@
-import { serviceProps } from '../servicesSection.model';
+import { mockServiceProps, serviceProps } from '../servicesSection.model';
 
 export interface ServiceModalProps {
-  data: serviceProps;
+  data: serviceProps | mockServiceProps;
 }
 
 export interface ServiceDetailProps {
