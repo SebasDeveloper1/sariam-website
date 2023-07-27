@@ -11,7 +11,7 @@ export default function Footer() {
 
   const renderSocialMediaIcons = () => {
     return socialMediaList.map((item) => (
-      <li key={`social-media-${item.title}`}>
+      <li role="listitem" key={`social-media-${item.title}`}>
         <a
           href={item.url}
           target="_blank"
@@ -26,7 +26,10 @@ export default function Footer() {
   };
 
   return (
-    <section className="relative overflow-hidden w-full py-24 bg-gray-100 border-t-8 border-lime-500">
+    <footer
+      role="footer"
+      className="relative overflow-hidden w-full py-24 bg-gray-100 border-t-8 border-lime-500"
+    >
       <div className="relative flex flex-col justify-center items-center w-11/12 mx-auto">
         <figcaption className="flex justify-center items-center gap-x-2 mb-6">
           <figure className="relative w-12 aspect-square rounded-full bg-gray-900 border-2 border-lime-500">
@@ -52,6 +55,6 @@ export default function Footer() {
           {renderSocialMediaIcons()}
         </ul>
       </div>
-    </section>
+    </footer>
   );
 }
