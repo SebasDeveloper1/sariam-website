@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header container Snapshots should match snapshot 1`] = `
+<div>
+  <header
+    class="z-20 fixed top-0 flex items-center w-full h-16 bg-gray-900 shadow-sm shadow-gray-950"
+  >
+    <nav
+      class="flex justify-between w-11/12 mx-auto"
+    >
+      <div
+        class="flex items-center justify-between w-full md:gap-x-12"
+      >
+        <a
+          class="className font-bold text-3xl text-white"
+          href="#inicio"
+        >
+          SariamParty
+        </a>
+        <ul
+          class="hidden xl:flex items-center justify-center gap-x-6"
+        >
+          <li
+            class="navbar-item-xl"
+          >
+            <a
+              href="#inicio"
+            >
+              Inicio
+            </a>
+          </li>
+          <li
+            class="navbar-item-xl"
+          >
+            <a
+              href="#eventos"
+            >
+              Últimos eventos
+            </a>
+          </li>
+          <li
+            class="navbar-item-xl"
+          >
+            <a
+              href="#servicios"
+            >
+              Servicios
+            </a>
+          </li>
+          <li
+            class="navbar-item-xl"
+          >
+            <a
+              href="#opiniones"
+            >
+              Opiniones
+            </a>
+          </li>
+          <li
+            class="button-primary rounded-2xl"
+          >
+            <a
+              href="#contacto"
+            >
+              Contacto
+            </a>
+          </li>
+        </ul>
+        <button
+          aria-label="Menu"
+          class="button-text rounded-full p-2.5 xl:hidden transition-all duration-300 transform text-lime-500 hover:text-lime-400  "
+          title="Menu"
+          type="button"
+        >
+          <span
+            class="text-4xl"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </span>
+        </button>
+        <div
+          class="fixed top-0 xl:hidden inset-0 h-screen flex justify-center px-10 py-20 mt-16 bg-gray-900/70 backdrop-filter backdrop-blur-md transition-all duration-500 ease-in-out menu-mobile--close"
+        >
+          <ul
+            class="flex flex-col items-center gap-y-6 w-full"
+          >
+            <li
+              class="navbar-item-sm w-full"
+            >
+              <a
+                href="#inicio"
+              >
+                Inicio
+              </a>
+            </li>
+            <li
+              class="navbar-item-sm w-full"
+            >
+              <a
+                href="#eventos"
+              >
+                Últimos eventos
+              </a>
+            </li>
+            <li
+              class="navbar-item-sm w-full"
+            >
+              <a
+                href="#servicios"
+              >
+                Servicios
+              </a>
+            </li>
+            <li
+              class="navbar-item-sm w-full"
+            >
+              <a
+                href="#opiniones"
+              >
+                Opiniones
+              </a>
+            </li>
+            <li
+              class="navbar-item-sm w-full"
+            >
+              <a
+                href="#contacto"
+              >
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+`;

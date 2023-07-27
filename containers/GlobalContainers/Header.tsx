@@ -48,7 +48,7 @@ export default function Header() {
           <IconButton
             type="button"
             variant="text"
-            title="Menu"
+            title={!isOpen ? 'Menu' : 'Cerrar'}
             aria-label="Menu"
             iconSize="text-4xl"
             icon={isOpen ? MdClose : MdMenu}
