@@ -54,11 +54,13 @@ export const GetEventColection = gql`
           id
         }
         title
-        mediaCollection {
-          items {
-            title
-            url
-          }
+        image {
+          title
+          description
+          size
+          width
+          height
+          url
         }
       }
     }

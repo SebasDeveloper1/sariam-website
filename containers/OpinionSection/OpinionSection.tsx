@@ -17,10 +17,6 @@ export default async function OpinionSection(): Promise<JSX.Element> {
     });
 
     opinionList = data.opinionCollection.items;
-    console.log(
-      '🚀 ~ file: OpinionSection.tsx:8 ~ OpinionSection ~ opinionList:',
-      opinionList[0]
-    );
   } catch (error) {
     console.log(error);
   }

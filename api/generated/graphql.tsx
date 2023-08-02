@@ -287,7 +287,7 @@ export enum AssetOrder {
   WidthDesc = 'width_DESC',
 }
 
-/** Author of the opinion [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/author) */
+/** Author of the opinion [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/author) */
 export type Author = Entry & {
   __typename?: 'Author';
   contentfulMetadata: ContentfulMetadata;
@@ -298,23 +298,23 @@ export type Author = Entry & {
   sys: Sys;
 };
 
-/** Author of the opinion [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/author) */
+/** Author of the opinion [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/author) */
 export type AuthorLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-/** Author of the opinion [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/author) */
+/** Author of the opinion [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/author) */
 export type AuthorNameArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
-/** Author of the opinion [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/author) */
+/** Author of the opinion [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/author) */
 export type AuthorPhotoArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
-/** Author of the opinion [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/author) */
+/** Author of the opinion [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/author) */
 export type AuthorRoleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
@@ -455,30 +455,28 @@ export enum EntryOrder {
   SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
 }
 
-/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/event) */
+/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/event) */
 export type Event = Entry & {
   __typename?: 'Event';
   contentfulMetadata: ContentfulMetadata;
+  image?: Maybe<Asset>;
   linkedFrom?: Maybe<EventLinkingCollections>;
-  mediaCollection?: Maybe<AssetCollection>;
   sys: Sys;
   title?: Maybe<Scalars['String']['output']>;
 };
 
-/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/event) */
+/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/event) */
+export type EventImageArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/event) */
 export type EventLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/event) */
-export type EventMediaCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-};
-
-/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/event) */
+/** This is the content type of the latest events. [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/event) */
 export type EventTitleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
@@ -495,7 +493,7 @@ export type EventFilter = {
   AND?: InputMaybe<Array<InputMaybe<EventFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<EventFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  mediaCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  image_exists?: InputMaybe<Scalars['Boolean']['input']>;
   sys?: InputMaybe<SysFilter>;
   title?: InputMaybe<Scalars['String']['input']>;
   title_contains?: InputMaybe<Scalars['String']['input']>;
@@ -626,7 +624,7 @@ export type ImageTransformOptions = {
   width?: InputMaybe<Scalars['Dimension']['input']>;
 };
 
-/** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/opinion) */
+/** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/opinion) */
 export type Opinion = Entry & {
   __typename?: 'Opinion';
   author?: Maybe<Author>;
@@ -636,19 +634,19 @@ export type Opinion = Entry & {
   sys: Sys;
 };
 
-/** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/opinion) */
+/** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/opinion) */
 export type OpinionAuthorArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   where?: InputMaybe<AuthorFilter>;
 };
 
-/** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/opinion) */
+/** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/opinion) */
 export type OpinionContentArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
-/** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/opinion) */
+/** This type contains the opinion of customers. [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/opinion) */
 export type OpinionLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
@@ -799,7 +797,7 @@ export type QueryServiceCollectionArgs = {
   where?: InputMaybe<ServiceFilter>;
 };
 
-/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/service) */
 export type Service = Entry & {
   __typename?: 'Service';
   cardDescription?: Maybe<Scalars['String']['output']>;
@@ -813,38 +811,38 @@ export type Service = Entry & {
   type?: Maybe<Scalars['String']['output']>;
 };
 
-/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/service) */
 export type ServiceCardDescriptionArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
-/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/service) */
 export type ServiceGeneralDescriptionArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
-/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/service) */
 export type ServiceLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/service) */
 export type ServiceMediaArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
-/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/service) */
 export type ServiceServiceDetailsArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
-/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/service) */
 export type ServiceTitleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
-/** This content type is about service| [See type definition](https://app.contentful.com/spaces/no3ohjkrfx2h/content_types/service) */
+/** This content type is about service| [See type definition](https://app.contentful.com/spaces/h5onrwafbbzu/content_types/service) */
 export type ServiceTypeArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
@@ -1083,13 +1081,14 @@ export type GetEventColectionQuery = {
       __typename?: 'Event';
       title?: string | null;
       sys: { __typename?: 'Sys'; id: string };
-      mediaCollection?: {
-        __typename?: 'AssetCollection';
-        items: Array<{
-          __typename?: 'Asset';
-          title?: string | null;
-          url?: string | null;
-        } | null>;
+      image?: {
+        __typename?: 'Asset';
+        title?: string | null;
+        description?: string | null;
+        size?: number | null;
+        width?: number | null;
+        height?: number | null;
+        url?: string | null;
       } | null;
     } | null>;
   } | null;
