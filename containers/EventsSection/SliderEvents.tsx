@@ -1,8 +1,11 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { Event } from '@/api/generated/graphql';
-import defaultImage from '@/public/sariam.png';
+import { WrapperImage } from '@/components';
+import {
+  AspectRatio,
+  fitOptions,
+} from '@/components/WrapperImage/WrapperImage.model';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -52,12 +55,12 @@ export default function SliderEvents({
           className="overflow-hidden w-full h-full mb-12 rounded-xl flex justify-center items-center"
         >
           <figure className="relative w-full h-full">
-            <Image
-              src={event?.image?.url || defaultImage}
+            <WrapperImage
+              src={event?.image?.url || ''}
               alt={event.title || ''}
               width={event?.image?.width || 1500}
-              height={event?.image?.height || 1000}
-              priority
+              aspectRatio={AspectRatio['16:9']}
+              fit={fitOptions.fill}
             />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-gray-950">
               <span className="paragraph_xl font-medium text-white">
