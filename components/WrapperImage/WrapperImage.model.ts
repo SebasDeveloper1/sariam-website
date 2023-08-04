@@ -23,4 +23,7 @@ export interface WrapperImageProps {
   height?: never;
   aspectRatio: AspectRatio;
   fit?: fitOptions;
+  priority?: boolean;
+  loading?: 'eager' | 'lazy' | undefined;
+  sizes?: string;
 }

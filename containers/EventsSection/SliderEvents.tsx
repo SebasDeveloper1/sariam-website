@@ -61,6 +61,7 @@ export default function SliderEvents({
               width={event?.image?.width || 1500}
               aspectRatio={AspectRatio['16:9']}
               fit={fitOptions.fill}
+              priority
             />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-gray-950">
               <span className="paragraph_xl font-medium text-white">

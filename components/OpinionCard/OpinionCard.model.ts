@@ -2,8 +2,12 @@ interface Author {
   name: string;
   role: string;
   photo: {
-    url: string;
+    title: string;
     description: string;
+    size: number;
+    url: string;
+    width: number;
+    height: number;
   };
 }
 

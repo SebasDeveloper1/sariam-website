@@ -7,6 +7,9 @@ export default function WrapperImage({
   aspectRatio,
   fit = 'scale' as fitOptions,
   alt,
+  priority = false,
+  loading = 'eager',
+  sizes,
 }: WrapperImageProps): JSX.Element {
   const getAspectRatioHeight = (aspectRatio: string, width: number): number => {
     const ratioParts = aspectRatio.split(':');
@@ -38,10 +41,12 @@ export default function WrapperImage({
       alt={alt}
       width={width}
       height={height}
-      priority
+      loading={loading}
+      priority={priority}
       loader={ImageLoader}
       placeholder="blur"
       blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+      sizes={sizes}
     />
   );
 }
