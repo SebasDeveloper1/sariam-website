@@ -1,6 +1,24 @@
+'use client';
+import { useState, useEffect } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
+const LoadingSkeleton = () => {
+  return (
+    <div className="button-primary w-1/2 h-14 bg-gray-800 hover:bg-gray-800 animate-pulse" />
+  );
+};
+
 export default function ContactButton(): JSX.Element {
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <LoadingSkeleton />;
+
   return (
     <a
       href="https://wa.link/kuu26s"
