@@ -1,4 +1,4 @@
-import { Poppins, Courgette, Montserrat } from 'next/font/google';
+import { Courgette, Montserrat } from 'next/font/google';
 
 export const fontPrimary = Montserrat({
   style: 'normal',

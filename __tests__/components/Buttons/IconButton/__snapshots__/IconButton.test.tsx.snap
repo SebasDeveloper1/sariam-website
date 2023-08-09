@@ -2,8 +2,8 @@
 
 exports[`IconButton component Snapshot should match the IconButton component snapshot 1`] = `
 <DocumentFragment>
-  <button
-    class="button-secondary rounded-full p-2.5  "
+  <div
+    class="button-primary w-12 aspect-square rounded-full p-2.5 bg-gray-800 hover:bg-gray-800 animate-pulse"
   />
 </DocumentFragment>
 `;

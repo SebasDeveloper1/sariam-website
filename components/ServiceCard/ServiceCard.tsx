@@ -1,13 +1,25 @@
 'use client';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 import { ServiceCardProps } from './ServiceCard.model';
 import Modal from '@/containers/Modal/Modal';
 import ServiceModal from '@/containers/ServicesSection/ServiceModal/ServiceModal';
 
+const LoadingSkeleton = () => {
+  return (
+    <div className="col-span-6 md:col-span-3 xl:col-span-2 w-full h-full min-h-[7rem] rounded-2xl bg-gray-800 animate-pulse" />
+  );
+};
+
 export default function ServiceCard({ data }: ServiceCardProps): JSX.Element {
   const { bgCard, icon, title, cardDescription } = data;
   const [serviceModalOpen, setServiceModalOpen] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -22,6 +34,8 @@ export default function ServiceCard({ data }: ServiceCardProps): JSX.Element {
     },
     [serviceModalOpen]
   );
+
+  if (loading) return <LoadingSkeleton />;
 
   return (
     <>

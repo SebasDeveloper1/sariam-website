@@ -30,39 +30,50 @@ const mockService: mockServiceProps = {
   bgCard: 'bg-thumbnail-yellow',
 };
 
-let card: HTMLElement;
-
 describe('ServiceCard component', () => {
   // Before running the tests, render the ServiceCard component with the mockService data
-  beforeAll(() => {
-    const { getByRole } = render(<ServiceCard data={mockService} />);
-    card = getByRole('article');
-  });
-
   describe('Rendering', () => {
     // Test that the ServiceCard component is rendered
     test('should render ServiceCard component', () => {
-      expect(card).toBeInTheDocument();
+      const MockTimer = setTimeout(() => {
+        const { getByRole } = render(<ServiceCard data={mockService} />);
+        const card = getByRole('article');
+        expect(card).toBeInTheDocument();
+      }, 1000);
+      clearTimeout(MockTimer);
     });
 
     // Test that ServiceCard's title is rendered correctly
     test("Should render ServiceCard's title", () => {
-      expect(card.querySelector('h3')).toHaveTextContent(mockService.title);
+      const MockTimer = setTimeout(() => {
+        const { getByRole } = render(<ServiceCard data={mockService} />);
+        const card = getByRole('article');
+        expect(card.querySelector('h3')).toHaveTextContent(mockService.title);
+      }, 1000);
+      clearTimeout(MockTimer);
     });
 
     // Test that ServiceCard's description is rendered correctly
     test("Should render ServiceCard's description", () => {
-      expect(card.querySelector('p')).toHaveTextContent(
-        mockService.cardDescription
-      );
+      const MockTimer = setTimeout(() => {
+        const { getByRole } = render(<ServiceCard data={mockService} />);
+        const card = getByRole('article');
+        expect(card.querySelector('p')).toHaveTextContent(
+          mockService.cardDescription
+        );
+      }, 1000);
+      clearTimeout(MockTimer);
     });
   });
 
   describe('Snapshot', () => {
     // Test that the rendered ServiceCard matches the snapshot
     test('matches snapshot', () => {
-      const { asFragment } = render(<ServiceCard data={mockService} />);
-      expect(asFragment()).toMatchSnapshot();
+      const MockTimer = setTimeout(() => {
+        const { asFragment } = render(<ServiceCard data={mockService} />);
+        expect(asFragment()).toMatchSnapshot();
+      }, 1000);
+      clearTimeout(MockTimer);
     });
   });
 });

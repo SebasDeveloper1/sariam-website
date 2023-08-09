@@ -1,8 +1,11 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { Event } from '@/api/generated/graphql';
-import defaultImage from '@/public/sariam.png';
+import { useState, useEffect } from 'react';
+import { SliderEventsProps } from './EventsSection.model';
+import { WrapperImage } from '@/components';
+import {
+  AspectRatio,
+  fitOptions,
+} from '@/components/WrapperImage/WrapperImage.model';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -10,14 +13,23 @@ import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
 import { FreeMode, Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-interface SliderEventsProps {
-  eventsList: Event[];
-}
+const LoadingSkeleton = () => {
+  return (
+    <div className="w-full md:w-1/2 lg:w-4/12 aspect-video rounded-xl bg-gray-800 animate-pulse" />
+  );
+};
 
 export default function SliderEvents({
   eventsList,
 }: SliderEventsProps): JSX.Element {
   const [screen, setScreen] = useState<number>(window.innerWidth);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    // Simulate API call delay for loading skeleton
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => setScreen(window.innerWidth);
@@ -26,6 +38,17 @@ export default function SliderEvents({
   }, [window.innerWidth]);
 
   const slidesPerView = screen < 768 ? 1 : screen < 1024 ? 2 : 3;
+
+  if (loading)
+    return (
+      <>
+        <div className="w-full flex justify-center items-center gap-4">
+          {[...Array(slidesPerView)].map((_, index) => (
+            <LoadingSkeleton key={`skeleton-${index}`} />
+          ))}
+        </div>
+      </>
+    );
 
   return (
     <Swiper
@@ -52,11 +75,12 @@ export default function SliderEvents({
           className="overflow-hidden w-full h-full mb-12 rounded-xl flex justify-center items-center"
         >
           <figure className="relative w-full h-full">
-            <Image
-              src={event?.image?.url || defaultImage}
+            <WrapperImage
+              src={event?.image?.url || ''}
               alt={event.title || ''}
               width={event?.image?.width || 1500}
-              height={event?.image?.height || 1000}
+              aspectRatio={AspectRatio['16:9']}
+              fit={fitOptions.fill}
               priority
             />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-gray-950">

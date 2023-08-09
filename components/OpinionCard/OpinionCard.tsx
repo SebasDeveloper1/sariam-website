@@ -1,18 +1,31 @@
 'use client';
-import { CSSProperties } from 'react';
-import Image from 'next/image';
-import defaultImage from '@/public/sariam.png';
+import { useState, useEffect } from 'react';
 import { Opinion } from '@/api/generated/graphql';
 import { MockOpinionTestProps } from './OpinionCard.model';
+import { WrapperImage } from '@/components';
+import { AspectRatio, fitOptions } from '../WrapperImage/WrapperImage.model';
+
+const LoadingSkeleton = () => {
+  return (
+    <div className="w-full h-52 aspect-video rounded-xl bg-gray-300 animate-pulse" />
+  );
+};
+
 export default function OpinionCard({
   opinionData,
 }: {
   opinionData: Opinion | MockOpinionTestProps;
 }) {
   const { content, author } = opinionData;
-  const imageStyle: CSSProperties = {
-    objectFit: 'cover',
-  };
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <LoadingSkeleton />;
 
   return (
     <div
@@ -21,19 +34,17 @@ export default function OpinionCard({
     >
       <figcaption className="flex justify-between items-center gap-x-3 w-full">
         <figure className="relative overflow-hidden w-14 aspect-square rounded-full object-cover">
-          <Image
-            src={author?.photo?.url || defaultImage}
+          <WrapperImage
+            src={author?.photo?.url || ''}
             alt={
               author?.photo?.description ||
               author?.name ||
               'Photo of the client'
             }
-            fill={true}
-            style={imageStyle}
+            width={author?.photo?.width || 100}
+            aspectRatio={AspectRatio['1:1']}
+            fit={fitOptions.fill}
             loading="lazy"
-            placeholder="blur"
-            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
-            sizes="3.5rem"
           />
         </figure>
         <div className="w-full">
