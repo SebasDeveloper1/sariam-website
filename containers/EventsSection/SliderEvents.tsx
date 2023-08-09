@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
 import { FreeMode, Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-const LoadingSkeleton = () => {
+const LoadingSkeleton = (): JSX.Element => {
   return (
     <div className="w-full md:w-1/2 lg:w-4/12 aspect-video rounded-xl bg-gray-800 animate-pulse" />
   );
@@ -22,11 +22,12 @@ const LoadingSkeleton = () => {
 export default function SliderEvents({
   eventsList,
 }: SliderEventsProps): JSX.Element {
-  const [screen, setScreen] = useState<number>(window.innerWidth);
+  const [screen, setScreen] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     // Simulate API call delay for loading skeleton
+    setScreen(window.innerWidth);
     const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
