@@ -1,14 +1,31 @@
 'use client';
+import { useState, useEffect } from 'react';
 import { Opinion } from '@/api/generated/graphql';
 import { MockOpinionTestProps } from './OpinionCard.model';
 import { WrapperImage } from '@/components';
 import { AspectRatio, fitOptions } from '../WrapperImage/WrapperImage.model';
+
+const LoadingSkeleton = () => {
+  return (
+    <div className="w-full h-52 aspect-video rounded-xl bg-gray-300 animate-pulse" />
+  );
+};
+
 export default function OpinionCard({
   opinionData,
 }: {
   opinionData: Opinion | MockOpinionTestProps;
 }) {
   const { content, author } = opinionData;
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <LoadingSkeleton />;
 
   return (
     <div

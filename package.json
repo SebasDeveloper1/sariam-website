@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "dev:host": "next dev -H 192.168.2.103",
+    "dev:host": "next dev -H 192.168.2.102",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

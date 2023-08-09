@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Event } from '@/api/generated/graphql';
+import { SliderEventsProps } from './EventsSection.model';
 import { WrapperImage } from '@/components';
 import {
   AspectRatio,
@@ -13,14 +13,23 @@ import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
 import { FreeMode, Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-interface SliderEventsProps {
-  eventsList: Event[];
-}
+const LoadingSkeleton = () => {
+  return (
+    <div className="w-full md:w-1/2 lg:w-4/12 aspect-video rounded-xl bg-gray-800 animate-pulse" />
+  );
+};
 
 export default function SliderEvents({
   eventsList,
 }: SliderEventsProps): JSX.Element {
   const [screen, setScreen] = useState<number>(window.innerWidth);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    // Simulate API call delay for loading skeleton
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => setScreen(window.innerWidth);
@@ -29,6 +38,17 @@ export default function SliderEvents({
   }, [window.innerWidth]);
 
   const slidesPerView = screen < 768 ? 1 : screen < 1024 ? 2 : 3;
+
+  if (loading)
+    return (
+      <>
+        <div className="w-full flex justify-center items-center gap-4">
+          {[...Array(slidesPerView)].map((_, index) => (
+            <LoadingSkeleton key={`skeleton-${index}`} />
+          ))}
+        </div>
+      </>
+    );
 
   return (
     <Swiper
