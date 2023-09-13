@@ -33,7 +33,8 @@ export default function IconButton({
     text: 'button-text rounded-full p-2.5',
   };
 
-  if (loading) return <LoadingSkeleton />;
+  if (loading && typeof window !== 'undefined' && window.innerWidth <= 768)
+    return <LoadingSkeleton />;
 
   return (
     <button
